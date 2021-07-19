@@ -1,0 +1,36 @@
+[debug] [2021-07-14T13:00:11.433Z] ----------------------------------------------------------------------
+[debug] [2021-07-14T13:00:11.438Z] Command:       D:\Microsoft VS Code\node.exe C:\Users\ASUS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2021-07-14T13:00:11.440Z] CLI Version:   9.16.0
+[debug] [2021-07-14T13:00:11.440Z] Platform:      win32
+[debug] [2021-07-14T13:00:11.440Z] Node Version:  v14.15.3
+[debug] [2021-07-14T13:00:11.446Z] Time:          Wed Jul 14 2021 14:00:11 GMT+0100 (British Summer Time)
+[debug] [2021-07-14T13:00:11.447Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-07-14T13:00:11.540Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-14T13:00:11.540Z] > authorizing via signed-in user (hailinhfc012@gmail.com)
+[debug] [2021-07-14T13:00:11.541Z] [iam] checking project thachcao-vn for permissions ["firebase.projects.get"]
+[debug] [2021-07-14T13:00:11.543Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-07-14T13:00:11.544Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-14T13:00:11.911Z] <<< HTTP RESPONSE 200 {"date":"Wed, 14 Jul 2021 13:00:11 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-14T13:00:11.995Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/thachcao-vn:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2021-07-14T13:00:13.510Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 14 Jul 2021 13:00:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=944","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-14T13:00:13.516Z] > refreshing access token with scopes: []
+[debug] [2021-07-14T13:00:13.516Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-14T13:00:13.712Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Wed, 14 Jul 2021 13:00:13 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-14T13:00:13.784Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/thachcao-vn [none]
+[debug] [2021-07-14T13:00:14.285Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/thachcao-vn 200
+[debug] [2021-07-14T13:00:14.286Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/thachcao-vn {"projectId":"thachcao-vn","projectNumber":"1028559850043","displayName":"thachcao-vn","name":"projects/thachcao-vn","resources":{"hostingSite":"thachcao-vn"},"state":"ACTIVE"}
+[info] 
+[info] === Serving from 'D:\React\web\my-web'...
+[info] 
+[debug] [2021-07-14T13:00:14.295Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/thachcao-vn/sites 
+[debug] [2021-07-14T13:00:15.807Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/thachcao-vn/sites 200
+[debug] [2021-07-14T13:00:15.808Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/thachcao-vn/sites {"sites":[{"name":"projects/1028559850043/sites/thachcao-vn","defaultUrl":"https://thachcao-vn.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2021-07-14T13:00:15.809Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/thachcao-vn/webApps/-/config [none]
+[debug] [2021-07-14T13:00:17.140Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/thachcao-vn/webApps/-/config 200
+[debug] [2021-07-14T13:00:17.140Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/thachcao-vn/webApps/-/config {"projectId":"thachcao-vn","storageBucket":"thachcao-vn.appspot.com","apiKey":"AIzaSyCbUC6m9AJGiPLsRzd-pApwEs_dfNlCsRQ","authDomain":"thachcao-vn.firebaseapp.com","messagingSenderId":"1028559850043"}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
