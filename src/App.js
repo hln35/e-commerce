@@ -93,14 +93,9 @@ const App = () => {
     
       <Router>
         <Appbar total={cartItems.total_items}/>
-        {/* <MessengerCustomerChat pageId="100070515170413" appId="410408943639284" />, */}
         <Switch>
           
-          <Route path='/home'>
-            <Home/>
-            
-            <Products products={products} onHandleAddToCart={handleAddToCart} onChooseProduct={getProductId}/>
-          </Route>
+          
           <Route path='/intro'>
             <Intro/>
           </Route>
@@ -122,6 +117,14 @@ const App = () => {
           }
           <Route path='/checkout'>
             <CheckOut cart={cartItems} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage}/>
+          </Route>
+
+          <Route path="/">
+            <Home/>
+            
+            <Products products={products} onHandleAddToCart={handleAddToCart} onChooseProduct={getProductId}/>
+            <MessengerCustomerChat pageId="100070515170413" appId="410408943639284" />,
+
           </Route>
         </Switch>
       </Router>

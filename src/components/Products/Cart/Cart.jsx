@@ -9,7 +9,7 @@ const Cart= (props) => {
         <>
         <Typography variant='subtitle1' className={classes.title}>
             You have no items in your shopping cart, 
-            <Link href='/home'>please find more here</Link>
+            <Link href='/'>please find more here</Link>
         </Typography>
         </>
     );
