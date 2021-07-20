@@ -9,7 +9,7 @@ import CheckOut from './components/CheckOutForm/CheckOut/CheckOut'
 import { commerce_1 } from './lib/commerce'
 import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import MessengerCustomerChat from 'react-messenger-customer-chat';
+
 
 
 
@@ -123,7 +123,7 @@ const App = () => {
             <Home/>
             
             <Products products={products} onHandleAddToCart={handleAddToCart} onChooseProduct={getProductId}/>
-            <MessengerCustomerChat pageId="100070515170413" appId="410408943639284" />,
+            
 
           </Route>
         </Switch>
