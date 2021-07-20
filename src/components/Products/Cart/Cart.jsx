@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Typography, Card, CardContent, CardMedia, Container, Link, Button } from '@material-ui/core'
+import { Grid, Typography, Card, CardContent, CardMedia, Container, Link, Button, CssBaseline } from '@material-ui/core'
 import useStyles from './cart_styles';
 import CartItem from './CartItem/CartItem';
 
@@ -43,6 +43,7 @@ const Cart= (props) => {
     if(!props.cart.line_items) return 'Loading....';
     return(
         <Container>
+        <CssBaseline/>
         <div className={classes.toolbar}/>
         <Typography gutterBottom variant='h4' style={{fontFamily:'Time New Roman'}}>
             Your shopping cart is:

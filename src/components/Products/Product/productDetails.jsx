@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTheme, makeStyles } from '@material-ui/core/styles';
-import { Typography, Card, CardMedia,CardContent, Grid, IconButton, Button, Hidden, BottomNavigation, BottomNavigationAction} from '@material-ui/core'
+import { Typography, Card, CardMedia,CardContent, Grid, IconButton, Button, Hidden, BottomNavigation, BottomNavigationAction, CssBaseline} from '@material-ui/core'
 import Carousel from 'react-material-ui-carousel'
 import { AddShoppingCart, Phone } from '@material-ui/icons';
 import { useState } from 'react';
@@ -97,6 +97,7 @@ const ProductDetail =(props) =>{
 
     return(
       <>
+              <CssBaseline/>
               <Hidden smDown>
              <Card className={classes.root}>
               

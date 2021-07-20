@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Badge, Typography, makeStyles, Hidden, Button} from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Badge, Typography, makeStyles, Hidden, Button, CssBaseline} from '@material-ui/core';
 import logo from '../../assests/vt_dropdown.png';
 import {AddShoppingCart} from '@material-ui/icons';
 import SimpleMenu from './NavItem/NavItem';
@@ -39,6 +39,7 @@ const Appbar = (props) => {
     const classes = useStyles();
     return(
         <AppBar position="sticky" style={{background: '#FDDC00'}} className={classes.appbar}>
+            <CssBaseline/>
             <Toolbar  >
     
                 <Button href='/'>
