@@ -41,7 +41,7 @@ const Appbar = (props) => {
         <AppBar position="sticky" style={{background: '#FDDC00'}} className={classes.appbar}>
             <Toolbar  >
     
-                <Button href='/home'>
+                <Button href='/'>
                     <img src={logo}>
                     </img> 
                     
