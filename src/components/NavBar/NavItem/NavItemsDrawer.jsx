@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { makeStyles, Typography, Menu, MenuItem, Button, List, ListItem, SwipeableDrawer, ListItemText} from '@material-ui/core'
+import { makeStyles, Typography, Menu, MenuItem, Button, List, ListItem, SwipeableDrawer, ListItemText, Link} from '@material-ui/core'
 import { Dehaze } from '@material-ui/icons';
 
 const useStyles =makeStyles((theme)=>({
@@ -38,7 +38,7 @@ const Drawer = (props) => {
               className={classes.popover}>
             <List>
                 {props.items.map((item) => 
-                <ListItem button key={item.name}>
+                <ListItem button key={item.name} component={Link} href={item.href}>
                     <ListItemText primary={item.name}/>
                 </ListItem>)}
             </List>
