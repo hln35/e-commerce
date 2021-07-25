@@ -3,6 +3,7 @@ import {Card, CardMedia, CardContent, Typography, Divider, Icon, Link} from '@ma
 import {GoogleMap, Marker, withGoogleMap, withScriptjs} from 'react-google-maps';
 import useStyles from './style_contact';
 import Movie from '../../assests/My_Movie_1.mov'
+import Movie2 from '../../assests/movie_2.mov'
 import {Home, Phone, MailOutline} from '@material-ui/icons'
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const Map = withScriptjs(withGoogleMap((props) => 
@@ -49,7 +50,7 @@ const MyMap = () => {
                 objectFit:'cover'
             }}
             >
-                <source src={Movie} type="video/mp4"/>
+                <source src={Movie2} type="video/mp4"/>
         </video>
      <Card className={classes.main}>
         <CardMedia className={classes.media}>
