@@ -26,7 +26,7 @@ const SimpleMenu = (props) =>{
             <Button aria-controls="menu" aria-haspopup="true" onClick={handleClick} href={props.item.href}>
                 <Typography variant='body2' className={classes.title}>{props.item.name}</Typography>
             </Button>
-            <Menu id="menu" anchorEl={anchorEl} 
+            {/* <Menu id="menu" anchorEl={anchorEl} 
                 getContentAnchorEl={null}
                 className={classes.popover} 
                 anchorOrigin={{vertical:'bottom', horizontal:'center'}} 
@@ -34,16 +34,8 @@ const SimpleMenu = (props) =>{
                 onClose={handleClose} 
                 open={open} 
                 keepMounted>
-                <MenuItem onClick={handleClose} >
-                    1
-                </MenuItem>
-                <MenuItem onClick={handleClose} >
-                    2
-                </MenuItem>
-                <MenuItem onClick={handleClose} >
-                    3
-                </MenuItem>
-            </Menu>
+                
+            </Menu> */}
         </div>
     )
 };

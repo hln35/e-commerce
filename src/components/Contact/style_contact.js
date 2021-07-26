@@ -38,10 +38,23 @@ const useStyles = makeStyles((theme) => ({
       main:{
           display:'flex',
           paddingLeft:20,
-          paddingTop:"50%",
-          backgroundColor:"#4a4a4a"
+          paddingTop:"10%",
+          position:"relative",
+          backgroundColor:"#4a4a4a",
+          [theme.breakpoints.down(780+ theme.spacing(2) * 2)]: {
+            
+            flexDirection:'column'}
 
 
+      },
+      contact:{
+        paddingTop:'110%',
+        backgroundColor:"#4a4a4a",
+        [theme.breakpoints.up(780+ theme.spacing(2) * 2)]: {
+            
+            paddingTop:'50%'}
+        
+        
       }
 }))
 
