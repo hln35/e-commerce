@@ -27,7 +27,7 @@ const CartItem =(props) =>{
                 </Button>
                 <Button variant='contained' color='secondary' onClick={() => {props.onRemove(props.item.id)}}>
                     <Typography variant='body2'>
-                        Remove
+                        Xóa
                     </Typography>
                 </Button>
             </CardActions>

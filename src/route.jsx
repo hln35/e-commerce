@@ -8,6 +8,7 @@ export default (
           <Route  path='/cart'/>
           <Route  path='/intro'/>
           <Route  path='/checkout'/>
+          <Route  path='/thachcao'/>
         </Route>
       
     )

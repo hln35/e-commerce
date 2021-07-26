@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTheme, makeStyles } from '@material-ui/core/styles';
-import { Typography, Card, CardMedia,CardContent, Grid, IconButton, Button, Hidden, BottomNavigation, BottomNavigationAction, CssBaseline} from '@material-ui/core'
+import { Typography, Card, CardMedia,CardContent, Grid, IconButton, Button, Hidden, BottomNavigation, BottomNavigationAction, CssBaseline, Link} from '@material-ui/core'
 import Carousel from 'react-material-ui-carousel'
 import { AddShoppingCart, Phone } from '@material-ui/icons';
 import { useState } from 'react';
@@ -125,9 +125,9 @@ const ProductDetail =(props) =>{
                   <Typography style={{color:"#FFFFFF"}} variant='secondary'  >
                   Them vao gio hang
                   </Typography>
-                 </Button>
+                 </Button >
                  <div className={classes.playIcon}/>
-                 <Button style={{border:"1px solid red", background:"#D0011B14"}} variant='contained'  >
+                 <Button style={{border:"1px solid red", background:"#D0011B14"}} variant='contained' href="/contact">
                  <IconButton style={{color:"#D0011B"}}>
                   <Phone/>
                   </IconButton>
@@ -201,7 +201,7 @@ const ProductDetail =(props) =>{
                                   className={classes.bottomNavigation}
                                   >
                <BottomNavigationAction label="Them vao gio" icon={<AddShoppingCart/>} style={{backgroundColor:"#FDDC00"}} onClick={() => {props.onAddToCart(props.product.id)}}/>
-               <BottomNavigationAction label="Lien he" icon={<Phone/>}/>
+               <BottomNavigationAction label="Lien he" icon={<Phone/>} href="/contact"/>
              </BottomNavigation>
            </Hidden>
           

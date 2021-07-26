@@ -7,6 +7,7 @@ import Cart from './components/Products/Cart/Cart'
 import ProductDetail from './components/Products/Product/productDetails'
 import CheckOut from './components/CheckOutForm/CheckOut/CheckOut'
 import MyMap from './components/Contact/contact'
+import IntroGypsum from './components/Home/Intro/intro_gypsum'
 import { commerce_1 } from './lib/commerce'
 import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
@@ -84,7 +85,7 @@ const App = () => {
     fetchCart();
   }, []);
 
-  console.log(cartItems)
+  console.log(products)
 
  
    
@@ -121,6 +122,10 @@ const App = () => {
           </Route>
           <Route path="/contact">
             <MyMap
+             />
+          </Route>
+          <Route path="/thachcao">
+            <IntroGypsum
              />
           </Route>
 

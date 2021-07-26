@@ -57,15 +57,15 @@ const Product = (props) =>{
       
         <div className={classes.space}/>
         <Link to={`/${props.product.id}`}>
-        <CardMedia  className={classes.media} image={props.product.assets[0].url} title={props.product.id} onClick={() => {props.handleGetId(props.product)}} >
+        <CardMedia  className={classes.media} image={props.product.assets[0].url} title={props.product.name} onClick={() => {props.handleGetId(props.product)}} >
         
         </CardMedia>
         </Link>
-        <Link to={`/${props.product.id}`}>
-        <CardContent onClick={() => {props.handleGetId(props.product)}}>
+        
+        <CardContent onClick={() => {props.handleGetId(props.product)}} >
             <Grid item xs={12} xs container justify="space-between">
                 <Grid item >
-                    <Typography variant='h6' gutterBottom>
+                    <Typography variant='h6' gutterBottom component={Link} to={`/${props.product.id}`}>
                     
                         {props.product.name}
                     
@@ -82,7 +82,7 @@ const Product = (props) =>{
             
 
         </CardContent>
-        </Link>
+        
         
         {/*<CardContent>
             <Typography variant='body2' color='textSecondary' dangerouslySetInnerHTML={{ __html:props.product.description}}>
