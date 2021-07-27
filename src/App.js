@@ -128,6 +128,10 @@ const App = () => {
             <IntroGypsum
              />
           </Route>
+          <Route path="/thachcaodep">
+            <IntroGypsum
+             />
+          </Route>
 
           <Route path="/">
             <Home/>
