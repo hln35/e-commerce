@@ -4,6 +4,8 @@ import useStyles from './gypsum_styles'
 import {Home} from '@material-ui/icons'
 import ProductCategory from '../../Products/product_category'
 import TranChim from '../../../assests/tran_chim.png'
+import TranTha from '../../../assests/tran-thach-cao-tha-1.jpg'
+import ProductVariant from '../../Products/Product/product_variant'
 const IntroGypsum = (props) => {
     const classes = useStyles()
     return(
@@ -117,10 +119,31 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
         <Card>
             <CardContent>
                 <Typography>
-                    Về trần nổi, hay còn gọi là trần thạch cao thả, là loại trần được thiết kế với một phần xương bị lộ ra ngoài. Đây là loại trần có tác dụng dùng để che đi các khuyết điểm của công trình như: đường dây điện, ống nước…đặt ở dưới trần bê tông hoặc dưới mái tôn, mái ngói. Trần thạch cao nổi thường được sử dụng trong việc thi công trần thạch cao phòng bếp, phòng tắm,... do chúng có thể thay thế vô cùng dễ dàng.
+                    Về trần nổi, hay còn gọi là trần thạch cao thả, là loại trần có thiết kế với một phần xương bị lộ ra ngoài. Nó có thể che đi các khuyết điểm của công trình như: đường dây điện, ống nước…đặt ở dưới trần bê tông hoặc dưới mái tôn, mái ngói. Trần thạch cao nổi thường được sử dụng trong việc thi công trần thạch cao phòng bếp, phòng tắm,... do chúng có thể thay thế vô cùng dễ dàng.
+                </Typography>
+                <Typography style={{fontWeight:'bold'}}>
+                    Ngoài ra chúng còn có một vài ưu điểm nữa các bạn có thể tham khảo:
+                </Typography>
+                <Typography>
+                    - Trần thả được lắp đặt vô cùng nhanh gọn, chúng có thể được lắp ngay trong khi công trình trong quá trình sử dụng
+                </Typography>
+                <Typography>
+                    - Trần thạch cao thả có thể giúp bạn tiết kiệm tối đa chi phí lắp đặt cũng như sửa chữa.
+                </Typography>
+                <Typography>
+                    - Đây cũng là lựa chọn giúp gia chủ dễ dàng kiểm tra, bảo dưỡng hệ thống điện, không khí trên trần.
+                </Typography>
+            </CardContent>
+            <CardMedia image={TranTha} className={classes.media} title={"trần thạch cao thả"} alt="trần thả"/>
+            <CardContent>
+                <Typography color='primary'>
+                Dưới đây là họa tiết các mẫu tấm ánh kim mà Tân Hải Vân đang phân phối. 
+
                 </Typography>
             </CardContent>
         </Card>
+        <br/>
+        <ProductVariant products={props.products} id="prod_ZRjywMOaVz57Y8"/>
         </main>
     )
 }
