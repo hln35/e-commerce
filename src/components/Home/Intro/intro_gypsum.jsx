@@ -1,9 +1,10 @@
 import React from 'react'
-import {Card, CardContent, CardMedia, Typography, Grid, ListItemAvatar, List, ListItemText, ListItem} from '@material-ui/core'
+import {Card, CardContent, CardMedia, Typography, Grid, ListItemAvatar, List, ListItemText, ListItem, Link} from '@material-ui/core'
 import useStyles from './gypsum_styles'
 import {Home} from '@material-ui/icons'
-import { typography } from '@material-ui/system'
-const IntroGypsum = () => {
+import ProductCategory from '../../Products/product_category'
+import TranChim from '../../../assests/tran_chim.png'
+const IntroGypsum = (props) => {
     const classes = useStyles()
     return(
         <main className={classes.main}>
@@ -80,6 +81,43 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
                 <br/>
                 <Typography variant="h6" style={{color:'#b5934c'}}> 
                 Việc chọn kiểu trần phù hợp cũng vô cùng quan trọng bên cạnh việc chọn nhà phân phối tấm thạch cao và khung xương uy tín. 
+                </Typography>
+                <br/>
+                <Typography style={{fontWeight:'bold'}}>
+                    Hiện nay phổ biến 2 loại trần là trần chìm và trần thả.
+                </Typography>
+                <Typography>
+                Trần chìm là một loại trần thạch cao có cấu tạo khung xương được ẩn giấu toàn bộ bên trên các tấm thạch cao, bạn sẽ không thể nhìn thấy các khung xương này, nhìn giống như trần bê tông bình thường. Trần chìm được thiết kế bao gồm khung xương và các tấm thạch cao, trong đó khung xương có tác dụng để treo các tấm thạch cao. Khung định hình bằng nhôm kẽm chữ U được bắt vít gắn kết với nhau, sau đó người ta ghép từng tấm thạch cao vào với nhau.
+                </Typography>
+            </CardContent>
+            <CardMedia image={TranChim} className={classes.media} title={"trần thạch cao chìm"} alt="cấu tạo trần chìm"/>
+            <CardContent>
+                <Typography style={{justifyContent:'center', fontWeight:'bold'}}>
+                    Ưu điểm:
+                </Typography>
+                <Typography>
+                    - Trần thạch cao chìm có ưu điểm về tính thẩm mỹ cao khi dễ dàng trang trí hoa văn, họa tiết theo sở thích.
+                </Typography>
+                <Typography>
+                    - Có thể cắt ghép kết hợp với nhiều loại đèn trang trí khác nhau mang đến vẻ đẹp sang trọng, tinh tế cho mỗi căn phòng.
+                </Typography>
+                <Typography>
+                    - Trần chìm dễ dàng ứng dụng trong nhiều thiết kế nội thất biệt thự, nhà phố, văn phòng…. khác nhau dù diện tích lớn hay nhỏ thì mẫu trần này cũng rất thích hợp.
+                </Typography>
+                <Typography>
+                    - Trọng lượng nhẹ, an toàn cho người sử dụng.
+                </Typography>
+                <br/>
+                <Typography component={Link} href='/'>
+                    Các bạn có thể tham khảo các sản phẩm của chúng tôi (tại đây)
+                </Typography>
+            </CardContent>
+        </Card>
+        <ProductCategory products={props.products} category="Tấm trần chìm"/>
+        <Card>
+            <CardContent>
+                <Typography>
+                    Về trần nổi, hay còn gọi là trần thạch cao thả, là loại trần được thiết kế với một phần xương bị lộ ra ngoài. Đây là loại trần có tác dụng dùng để che đi các khuyết điểm của công trình như: đường dây điện, ống nước…đặt ở dưới trần bê tông hoặc dưới mái tôn, mái ngói. Trần thạch cao nổi thường được sử dụng trong việc thi công trần thạch cao phòng bếp, phòng tắm,... do chúng có thể thay thế vô cùng dễ dàng.
                 </Typography>
             </CardContent>
         </Card>

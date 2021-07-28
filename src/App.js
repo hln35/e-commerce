@@ -124,12 +124,12 @@ const App = () => {
             <MyMap
              />
           </Route>
-          <Route path="/thachcao">
-            <IntroGypsum
+          <Route path="/thachcao" >
+            <IntroGypsum products={products}
              />
           </Route>
-          <Route path="/thachcaodep">
-            <IntroGypsum
+          <Route path="/thachcaodep" >
+            <IntroGypsum products={products}
              />
           </Route>
 

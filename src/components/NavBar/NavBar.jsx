@@ -43,8 +43,11 @@ const Appbar = (props) => {
             <Toolbar  >
     
                 <Button href='/'>
-                    <img src={logo}>
-                    </img> 
+                <Typography variant='h4' style={{fontWeight:'bold'}}>
+                        THV
+                    </Typography>
+                    
+                    {/* <img src={logo}/> */}
                     
                 </Button>
                 <div className={classes.root}></div>

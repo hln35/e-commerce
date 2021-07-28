@@ -13,6 +13,11 @@ const useStyles = makeStyles((theme) => ({
     content:{
         marginTop:theme.spacing(8),
         paddingTop:theme.spacing(4)
+    },
+    media:{
+        height:0,
+        width:"100%",
+        paddingTop:'60%'
     }
 
 }))

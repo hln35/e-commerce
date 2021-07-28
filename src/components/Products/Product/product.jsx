@@ -72,12 +72,12 @@ const Product = (props) =>{
                     </Typography>
                 </Grid>
                 
-                {/*<Grid item >
+                <Grid item >
                     <Typography variant='body2' color='textSecondary' >
                         {props.product.price.formatted_with_symbol}
                         
                     </Typography>
-                </Grid>*/}
+                </Grid>
             </Grid>
             
 
