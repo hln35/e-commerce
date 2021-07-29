@@ -115,11 +115,11 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
                 </Typography>
             </CardContent>
         </Card>
-        <ProductCategory products={props.products} category="Tấm trần chìm"/>
+        <ProductCategory products={props.products} category="Tấm trần chìm" showPrice={false}/>
         <Card>
             <CardContent>
                 <Typography>
-                    Về trần nổi, hay còn gọi là trần thạch cao thả, là loại trần có thiết kế với một phần xương bị lộ ra ngoài. Nó có thể che đi các khuyết điểm của công trình như: đường dây điện, ống nước…đặt ở dưới trần bê tông hoặc dưới mái tôn, mái ngói. Trần thạch cao nổi thường được sử dụng trong việc thi công trần thạch cao phòng bếp, phòng tắm,... do chúng có thể thay thế vô cùng dễ dàng.
+                    Về trần nổi, hay còn gọi là trần thạch cao thả, là loại trần có thiết kế với tấm trang trí và một phần khung xương bị lộ ra ngoài. Nó có thể che đi các khuyết điểm của công trình như: đường dây điện, ống nước…đặt ở dưới trần bê tông hoặc dưới mái tôn, mái ngói. Trần thạch cao nổi thường được sử dụng trong việc thi công trần thạch cao phòng bếp, phòng tắm,... do chúng có thể thay thế vô cùng dễ dàng.
                 </Typography>
                 <Typography style={{fontWeight:'bold'}}>
                     Ngoài ra chúng còn có một vài ưu điểm nữa các bạn có thể tham khảo:
@@ -131,12 +131,12 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
                     - Trần thạch cao thả có thể giúp bạn tiết kiệm tối đa chi phí lắp đặt cũng như sửa chữa.
                 </Typography>
                 <Typography>
-                    - Đây cũng là lựa chọn giúp gia chủ dễ dàng kiểm tra, bảo dưỡng hệ thống điện, không khí trên trần.
+                    - Đây cũng là lựa chọn giúp gia chủ dễ dàng kiểm tra, bảo dưỡng hệ thống điện, không khí phía trên trần.
                 </Typography>
             </CardContent>
             <CardMedia image={TranTha} className={classes.media} title={"trần thạch cao thả"} alt="trần thả"/>
             <CardContent>
-                <Typography color='primary'>
+                <Typography color='primary' component={Link} href="/">
                 Dưới đây là họa tiết các mẫu tấm ánh kim mà Tân Hải Vân đang phân phối. 
 
                 </Typography>
@@ -144,6 +144,16 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
         </Card>
         <br/>
         <ProductVariant products={props.products} id="prod_ZRjywMOaVz57Y8"/>
+        <Card>
+            <CardContent>
+                <Typography style={{fontWeight:'bold'}}>
+                    Công ty TNHH Xây lắp và Thương mại Tân Hải Vân với gần 20 năm kinh nghiệm gắn bó với ngành trần và đang là một trong những trung tâm phân phối lớn nhất miền bắc cam kết sẽ cung cấp cho công trình của bạn nguồn vật tư chất lượng với giá thành vô cùng ưu đãi.
+                 </Typography>
+            </CardContent>
+        </Card>
+            <ProductCategory products={props.products} category="Thi công trần" showPrice={true}/>      
+         
+
         </main>
     )
 }

@@ -21,7 +21,7 @@ const App = () => {
   const [product, setProduct] = useState();
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState()
-  
+  const [categories, setCategories] = useState({});
 
   const fetchProducts  = async () =>{
     const {data} = await commerce_1.products.list();
@@ -33,7 +33,12 @@ const App = () => {
     const cart = await commerce_1.cart.retrieve();
     setCartItems(cart);
   };
-  
+
+  const fetchCategories = async () =>{
+    const {data} = await commerce_1.categories.list();
+    setCategories(data);
+  };
+
   
 
   const handleAddToCart = async (productId, quantity) =>{
@@ -83,9 +88,13 @@ const App = () => {
   useEffect(() =>{
     fetchProducts();
     fetchCart();
+    
+  }, []);
+  useEffect(() =>{
+    fetchCategories();
   }, []);
 
-  console.log(products)
+  console.log(categories)
 
  
    
@@ -136,7 +145,7 @@ const App = () => {
           <Route path="/">
             <Home/>
             
-            <Products products={products} onHandleAddToCart={handleAddToCart} onChooseProduct={getProductId}/>
+            <Products products={products} onHandleAddToCart={handleAddToCart} onChooseProduct={getProductId} categories={categories}/>
             
 
           </Route>

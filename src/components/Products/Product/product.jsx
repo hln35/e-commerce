@@ -65,19 +65,19 @@ const Product = (props) =>{
         <CardContent onClick={() => {props.handleGetId(props.product)}} >
             <Grid item xs={12} xs container justify="space-between">
                 <Grid item >
-                    <Typography variant='h6' gutterBottom component={Link} to={`/${props.product.id}`}>
+                    <Typography variant='body1' gutterBottom component={Link} to={`/${props.product.id}`}>
                     
                         {props.product.name}
                     
                     </Typography>
                 </Grid>
                 
-                <Grid item >
+                {props.showPrice && <Grid item >
                     <Typography variant='body2' color='textSecondary' >
                         {props.product.price.formatted_with_symbol}
                         
                     </Typography>
-                </Grid>
+                </Grid>}
             </Grid>
             
 

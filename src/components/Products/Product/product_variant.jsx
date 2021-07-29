@@ -54,7 +54,7 @@ const ProductVariant = (props) =>{
 
     
     return(
-    props.products.map((product) => ( product.variant_groups.length != 0 && product.id ===props.id &&
+    props.products.map((product) => ( product.variant_groups.length !== 0 && product.id ===props.id &&
         <Grid container justify="center" spacing={4} >
             {product.assets.map((image) => (
             <Grid item xs={6} sm={6} md={4} lg={3}>

@@ -11,8 +11,8 @@ const ProductCategory = (props) => {
             <Grid container justify="center" spacing={4}>
                 { props.products.map((product) => (
                      product.categories[0].name === props.category &&
-                <Grid item xs={6} sm={6} md={4}>
-                    <Product product={product} handleAddToCart={props.onHandleAddToCart} handleGetId={props.onChooseProduct}/>
+                <Grid item xs={6} sm={6} md={4} lg={3}>
+                    <Product product={product} handleAddToCart={props.onHandleAddToCart} handleGetId={props.onChooseProduct} showPrice={props.showPrice}/>
                   </Grid>
                   
                 ))}

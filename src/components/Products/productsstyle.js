@@ -10,6 +10,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+
+  formControl: {
+    width:"50%",
+    paddingBottom:'5%'
+  }
 }));
 
 export default useStyles;
