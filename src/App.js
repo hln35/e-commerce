@@ -34,10 +34,7 @@ const App = () => {
     setCartItems(cart);
   };
 
-  const fetchCategories = async () =>{
-    const {data} = await commerce_1.categories.list();
-    setCategories(data);
-  };
+ 
 
   
 
@@ -87,14 +84,11 @@ const App = () => {
 
   useEffect(() =>{
     fetchProducts();
-    fetchCart();
+    fetchCart(); 
     
   }, []);
-  useEffect(() =>{
-    fetchCategories();
-  }, []);
 
-  console.log(categories)
+  console.log(cartItems)
 
  
    

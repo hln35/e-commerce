@@ -149,10 +149,31 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
                 <Typography style={{fontWeight:'bold'}}>
                     Công ty TNHH Xây lắp và Thương mại Tân Hải Vân với gần 20 năm kinh nghiệm gắn bó với ngành trần và đang là một trong những trung tâm phân phối lớn nhất miền bắc cam kết sẽ cung cấp cho công trình của bạn nguồn vật tư chất lượng với giá thành vô cùng ưu đãi.
                  </Typography>
+                 <Typography>
+                     Dưới đây là giá thi công trần thạch cao của chúng tôi.  
+                 </Typography>
+                 <Typography color='textSecondary'>
+                     Lưu ý: Giá được tính trên đơn vị là m2 và chưa bao gồm sơn bả đối với trần chìm
+                 </Typography>
             </CardContent>
         </Card>
-            <ProductCategory products={props.products} category="Thi công trần" showPrice={true}/>      
-         
+        <ProductCategory products={props.products} category="Thi công trần" showPrice={true}/>      
+        <Card>
+            <CardContent>
+                <Typography style={{fontWeight:"bolder"}}>
+                    Ngoài các giải pháp về trần, Tân Hải Vân còn chuyên phân phối và thi công các công trình vách ngăn.
+                </Typography>
+                <Typography>
+                    Có thể nói tường hay vách ngăn làm từ thạch cao là một sự lựa chọn vô cùng tối ưu hiện nay được rất nhiều gia chủ ưa chuộng. Ngoài khả năng ngăn chia không gian một cách linh hoạt, chúng còn có những tính năng vô cùng ưu việt ví dụ như chịu ẩm, cách âm hay chống cháy. Có thể nói một hệ tường thạch cao tiêu chuẩn sẽ có thể đem đến cho gia đình bạn một không gian thoải mái và riêng tư nhất.
+                </Typography>
+                <br/>
+                <Typography>
+                    Hiện nay chúng tôi đang cung cấp các giải pháp tường thạch cao sau đây:
+                </Typography>
+            
+            </CardContent>
+        </Card>
+        <ProductCategory products={props.products} category="Thi công vách" showPrice={true}/> 
 
         </main>
     )
