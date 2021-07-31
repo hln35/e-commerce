@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Card, CardContent, CardMedia, Typography, Grid, ListItemAvatar, List, ListItemText, ListItem, Link, Icon, Button, BottomNavigation} from '@material-ui/core'
 import useStyles from './gypsum_styles'
 import {Home, Phone} from '@material-ui/icons'
@@ -10,6 +10,7 @@ import zalo from '../../../assests/zalo.png'
 import { Helmet } from 'react-helmet'
 const IntroGypsum = (props) => {
     const classes = useStyles()
+    
     return(
         <main className={classes.main}>
         <Helmet>
@@ -25,8 +26,11 @@ const IntroGypsum = (props) => {
                 </Typography>
                 <br/>
                 <Typography>
-                Trong thiết kế xây dựng hiện đại. Những loại trần thạch cao ngày càng được ưa chuộng và ứng dụng rộng rãi bởi những tính năng ưu việt như nhẹ và có khả năng chống ẩm, chống cháy tốt, cách âm hiệu quả. Ngoài ra, sự đa dạng về mẫu mã cũng khiến cho trần thạch cao ngày càng được lòng khách hàng.
-Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần thạch cao có những kiểu nào. Và các thương hiệu trần thạch cao nổi tiếng cũng như các mẫu thiết kế trần thạch cao cho phòng khách, phòng ngủ hay nhà bếp đẹp.
+                Trong thiết kế xây dựng hiện đại. Thạch cao ngày càng được ưa chuộng và ứng dụng rộng rãi ví dụ như vách hay trần thạch cao bởi những tính năng ưu việt như nhẹ và có khả năng chống ẩm, chống cháy tốt, cách âm hiệu quả. Ngoài ra, sự đa dạng về mẫu mã cũng khiến cho trần thạch cao ngày càng được lòng khách hàng.
+Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần thạch cao cũng như nghe đến các thương hiệu thạch cao nổi tiếng trên thế giới nhưng vẫn muốn cân nhắc sử dụng thạch cao cho ngôi nha của mình thì đây chính là bài viết Tân Hải Vân dành cho quý vị. 
+                </Typography>
+                <Typography style={{fontWeight:"bold"}}>
+                Đồng thời Tân Hải Vân cũng sẽ giới thiệu về các gói thi công trần vách thạch cao hoàn thiện của công ty chúng tôi.
                 </Typography>
                 <br/>
                 <Typography variant="h6" style={{color:'#b5934c'}}>
@@ -187,15 +191,22 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
                 <Typography>
                     Có thể nói các mức giá được nêu trên của chúng tôi được đánh giá là vô cùng ưu đãi trong thời kì dịch bệnh hiện nay và là giá chính xác trong năm 2021. Để có được dịch vụ với giá tốt nhất đến gia chủ, Tân Hải Vân đã có các giải pháp cắt giảm chi phí tối ưu nhất ví dụ như công ty đã đồng hành với Vĩnh Tường trong suốt một thập kỉ với tư cách là một trong những nhà phân phối lớn nhất cả nước. Ngoài ra Tân Hải Vân cũng sản xuất các sản phẩm khung xương, tấm trần thả PVC mang thương hiệu của chúng tôi có thể giúp cắt giảm chi phí vật tư đầu vào theo yêu cầu của gia chủ.  
                 </Typography>
+                <br/>
+                    <Typography>Chắc hẳn với bài viết trên bạn đã nắm được những kiến thức chung về dịch vụ thi công trần và vách thạch cao tại Tân Hải Vân.</Typography>
             </CardContent>
         </Card>
-        <Card
-        className={classes.botNav}>
-                <CardContent>
-                    <Typography>Liên hệ</Typography>
+        <Card style={{
+            background: "rgb(219,127,237)",
+            background: "linear-gradient(90deg, rgba(219,127,237,1) 0%, rgba(117,117,235,1) 35%, rgba(0,212,255,1) 100%)",
+            borderRadius:"0"}}
+            className={classes.banner}>
+            
+                <CardContent  component={Link} href="/contact">
+                    <Typography variant="h6" style={{fontWeight:"bold", color:"#913d00"}} >Để được tư vấn chi tiết, cụ thể hơn nữa, bạn có thể liên hệ với chúng tôi (tại đây).</Typography>
                 </CardContent>
                 
         </Card> 
+        <br/>
         </main>
     )
 }

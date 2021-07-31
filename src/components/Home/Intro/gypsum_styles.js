@@ -30,6 +30,10 @@ const useStyles = makeStyles((theme) => ({
     botNav:{
         position:"absolute",
         width:'100%'
+    },
+    banner: {
+        "&:hover":{transform:"scale3d(1.05, 1.05, 1)", transition: "0.5s ease-in-out"}
+        
     }
 
 }))
