@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, Typography, Card, CardContent, CardMedia, Container, Link, Button, CssBaseline } from '@material-ui/core'
 import useStyles from './cart_styles';
 import CartItem from './CartItem/CartItem';
-
+import {Helmet} from "react-helmet";
 const Cart= (props) => {
     const classes = useStyles();
     const UnFilled = () =>(
@@ -43,6 +43,13 @@ const Cart= (props) => {
     if(!props.cart.line_items) return 'Loading....';
     return(
         <Container>
+            <Helmet>
+                <title>
+                   Giỏ hàng | Công ty Tân Hải Vân
+                </title>
+                <meta name="description" content="Giỏ hàng của hệ thống mua hàng online của công ty Tân Hải Vân"/>
+                <meta name="keywords" content="giỏ hàng, thạch cao, vĩnh tường, trần thạch cao, vách thạch cao"/>
+            </Helmet>
         <CssBaseline/>
         <div className={classes.toolbar}/>
         <Typography gutterBottom variant='h4' style={{fontFamily:'Time New Roman'}}>

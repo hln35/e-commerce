@@ -6,6 +6,7 @@ import { AddShoppingCart, Phone } from '@material-ui/icons';
 import { useState } from 'react';
 import Cart from '../Cart/Cart';
 import {ImageList, ImageListItem} from '@material-ui/core'
+import { Helmet } from 'react-helmet';
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
@@ -97,6 +98,13 @@ const ProductDetail =(props) =>{
 
     return(
       <>
+               <Helmet>
+                <title>
+                   {props.product.name} | Công ty Tân Hải Vân
+                </title>
+                <meta name="description" content="Hệ thống mua hàng online của công ty Tân Hải Vân"/>
+                <meta name="keywords" content="tân hải vân, hàng chính hãng, thạch cao, vĩnh tường, trần thạch cao, vách thạch cao"/>
+            </Helmet>
               <CssBaseline/>
               <Hidden smDown>
              <Card className={classes.root}>

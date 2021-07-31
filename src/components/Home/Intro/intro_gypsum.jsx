@@ -6,14 +6,20 @@ import ProductCategory from '../../Products/product_category'
 import TranChim from '../../../assests/tran_chim.png'
 import TranTha from '../../../assests/tran-thach-cao-tha-1.jpg'
 import ProductVariant from '../../Products/Product/product_variant'
+import { Helmet } from 'react-helmet'
 const IntroGypsum = (props) => {
     const classes = useStyles()
     return(
         <main className={classes.main}>
+        <Helmet>
+            <title>Thi công trần vách thạch cao| Công ty Tân Hải Vân</title>
+            <meta name="description" content="Công ty TNHH xây lắp và thương mại Tân Hải Vân chuyên cung cấp vật tư giá đến các công trình trên cả nước, đồng thời cung cấp các giải pháp toàn diện về trần vách thạch cao đến các hộ gia đình Việt Nam "/>
+            <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, thi công, giá rẻ, 2021"/>
+        </Helmet>
         <Card className={classes.content}>
             <CardContent>
-                <Typography variant="h1">
-                    Trần thạch cao đẹp 
+                <Typography variant="h2">
+                    Trần vách thạch cao đẹp uy tín cho mọi khách hàng 
                 </Typography>
                 <br/>
                 <Typography>

@@ -6,7 +6,7 @@ import AddressForm from "./AddressForm"
 import PaymentForm from "./PaymentForm"
 import Confirmation from "./Confirmation"
 import { commerce_1 } from "../../../lib/commerce"
-
+import { Helmet } from "react-helmet"
 const CheckOut =({cart, order, error, onCaptureCheckout}) => {
     const[activeStep, setActiveStep] = useState(0);
     const[token,setToken] = useState(null)
@@ -52,6 +52,11 @@ const CheckOut =({cart, order, error, onCaptureCheckout}) => {
         
     return(
         <>
+            <Helmet>
+                <title>Thanh toán | Công ty Tân Hải Vân</title>
+                <meta name="description" content="Trang thanh toán của hệ thống mua hàng online công ty TNHH xây lắp và thương mại Tân Hải Vân"/>
+                <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, thanh toán"/>
+            </Helmet>
             <main className={classes.layout}>
                 <CssBaseline/>
                 <Paper className={classes.paper}>

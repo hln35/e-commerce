@@ -2,11 +2,18 @@ import React from 'react'
 import { Grid, Card, Typography, CardContent, CardMedia, IconButton } from '@material-ui/core'
 import useStyles from './intro_styles'
 import { Star } from '@material-ui/icons'
+import { Helmet } from 'react-helmet'
 const Intro =() =>{
     const classes=useStyles();
     return(
         <main className={classes.main}>
-            
+             <Helmet>
+                <title>
+                   Giới thiệu | Công ty Tân Hải Vân
+                </title>
+                <meta name="description" content="Về công ty TNHH xây lắp và thương mại Tân Hải Vân"/>
+                <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, giới thiệu"/>
+            </Helmet>
             <Grid className={classes.marginleft}/>
             <Grid className={classes.root}>
             <div className={classes.space}/>

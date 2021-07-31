@@ -6,6 +6,7 @@ import Movie from '../../assests/My_Movie_1.mov'
 import Movie2 from '../../assests/movie_2.mov'
 import Movie3 from '../../assests/video_3.mov'
 import {Home, Phone, MailOutline} from '@material-ui/icons'
+import { Helmet } from 'react-helmet';
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const Map = withScriptjs(withGoogleMap((props) => 
             
@@ -22,9 +23,7 @@ const Map = withScriptjs(withGoogleMap((props) =>
             ))
 
 const MyMap = () => {
-    const Toggle = () =>{
-        
-    } 
+   
     const classes = useStyles()
     return(
     //   <Map 
@@ -37,6 +36,11 @@ const MyMap = () => {
     //           handleOpen={Toggle}
     //           />
     <main className={classes.root}>
+        <Helmet>
+            <title>Thông tin liên hệ| Công ty Tân Hải Vân </title>
+            <meta name="description" content="Thông tin liên hệ với công ty TNHH xây lắp và thương mại Tân Hải Vân"/>
+            <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, liên hệ, 2021"/>
+        </Helmet>
         <video 
             autoPlay
             loop
