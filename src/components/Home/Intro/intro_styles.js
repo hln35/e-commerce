@@ -34,6 +34,13 @@ const useStyles = makeStyles((theme) =>({
         height:0,
         paddingTop:'40%',
         transform:'scale(0.8,0.9)'
+    },
+    icon:{
+        position:"fixed",
+        transform:"scale(0.15,0.15)",
+        bottom:"10%",
+        right:-110,  
+        zIndex:"1"
     }
 
 

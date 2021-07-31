@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, CardMedia, CardContent, Typography, Divider, Icon, Link} from '@material-ui/core'
+import {Card, CardMedia, CardContent, Typography, Divider, Icon, Link, Button} from '@material-ui/core'
 import {GoogleMap, Marker, withGoogleMap, withScriptjs} from 'react-google-maps';
 import useStyles from './style_contact';
 import Movie from '../../assests/My_Movie_1.mov'
@@ -7,6 +7,8 @@ import Movie2 from '../../assests/movie_2.mov'
 import Movie3 from '../../assests/video_3.mov'
 import {Home, Phone, MailOutline} from '@material-ui/icons'
 import { Helmet } from 'react-helmet';
+import zalo from '../../assests/zalo.png'
+import gif_1 from '../../assests/gif_1.gif'
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const Map = withScriptjs(withGoogleMap((props) => 
             
@@ -41,7 +43,7 @@ const MyMap = () => {
             <meta name="description" content="Thông tin liên hệ với công ty TNHH xây lắp và thương mại Tân Hải Vân"/>
             <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, liên hệ, 2021"/>
         </Helmet>
-        <video 
+        {/* <video 
             autoPlay
             loop
             muted
@@ -56,7 +58,19 @@ const MyMap = () => {
             }}
             >
                 <source src={Movie3} type="video/mp4"/>
-        </video>
+        </video> */}
+        <img src={gif_1}
+                className={classes.video}
+                 style={{
+                position: "absolute",
+            
+                top:'50%',
+                left:'50%',
+                transform:'translate(-50%,-50%)',
+                objectFit:'cover'
+            }}></img>
+        <Button className={classes.icon} style={{color:"#479cc9"}} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo}/></Button>
+
         <div className={classes.contact}/>
      <Card className={classes.main}>
         <CardMedia className={classes.media}>

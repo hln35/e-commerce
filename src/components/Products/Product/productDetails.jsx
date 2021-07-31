@@ -7,6 +7,7 @@ import { useState } from 'react';
 import Cart from '../Cart/Cart';
 import {ImageList, ImageListItem} from '@material-ui/core'
 import { Helmet } from 'react-helmet';
+import zalo from '../../../assests/zalo.png'
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
@@ -73,7 +74,14 @@ const useStyles = makeStyles((theme) => ({
       position: "fixed", 
       justifyContent:"space-between",
       width:"100%"
-    }
+    }, 
+    icon:{
+      position:"fixed",
+      transform:"scale(0.15,0.15)",
+      bottom:"10%",
+      right:-110,  
+      zIndex:"1"
+  }
 
     
      
@@ -105,6 +113,8 @@ const ProductDetail =(props) =>{
                 <meta name="description" content="Hệ thống mua hàng online của công ty Tân Hải Vân"/>
                 <meta name="keywords" content="tân hải vân, hàng chính hãng, thạch cao, vĩnh tường, trần thạch cao, vách thạch cao"/>
             </Helmet>
+            <Button className={classes.icon} style={{color:"#479cc9"}} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo}/></Button>
+
               <CssBaseline/>
               <Hidden smDown>
              <Card className={classes.root}>

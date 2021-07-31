@@ -1,8 +1,9 @@
 import React from 'react'
-import { Grid, Card, Typography, CardContent, CardMedia, IconButton } from '@material-ui/core'
+import { Grid, Card, Typography, CardContent, CardMedia, IconButton, Button, Link } from '@material-ui/core'
 import useStyles from './intro_styles'
 import { Star } from '@material-ui/icons'
 import { Helmet } from 'react-helmet'
+import zalo from '../../../assests/zalo.png'
 const Intro =() =>{
     const classes=useStyles();
     return(
@@ -14,6 +15,8 @@ const Intro =() =>{
                 <meta name="description" content="Về công ty TNHH xây lắp và thương mại Tân Hải Vân"/>
                 <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, giới thiệu"/>
             </Helmet>
+            <Button className={classes.icon} style={{color:"#479cc9"}} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo}/></Button>
+
             <Grid className={classes.marginleft}/>
             <Grid className={classes.root}>
             <div className={classes.space}/>

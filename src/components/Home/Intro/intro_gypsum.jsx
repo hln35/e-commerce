@@ -1,11 +1,12 @@
 import React from 'react'
-import {Card, CardContent, CardMedia, Typography, Grid, ListItemAvatar, List, ListItemText, ListItem, Link} from '@material-ui/core'
+import {Card, CardContent, CardMedia, Typography, Grid, ListItemAvatar, List, ListItemText, ListItem, Link, Icon, Button, BottomNavigation} from '@material-ui/core'
 import useStyles from './gypsum_styles'
-import {Home} from '@material-ui/icons'
+import {Home, Phone} from '@material-ui/icons'
 import ProductCategory from '../../Products/product_category'
 import TranChim from '../../../assests/tran_chim.png'
 import TranTha from '../../../assests/tran-thach-cao-tha-1.jpg'
 import ProductVariant from '../../Products/Product/product_variant'
+import zalo from '../../../assests/zalo.png'
 import { Helmet } from 'react-helmet'
 const IntroGypsum = (props) => {
     const classes = useStyles()
@@ -16,10 +17,11 @@ const IntroGypsum = (props) => {
             <meta name="description" content="Công ty TNHH xây lắp và thương mại Tân Hải Vân chuyên cung cấp vật tư giá đến các công trình trên cả nước, đồng thời cung cấp các giải pháp toàn diện về trần vách thạch cao đến các hộ gia đình Việt Nam "/>
             <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, thi công, giá rẻ, 2021"/>
         </Helmet>
+        <Button className={classes.icon} style={{color:"#479cc9"}} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo}/></Button>
         <Card className={classes.content}>
             <CardContent>
                 <Typography variant="h2">
-                    Trần vách thạch cao đẹp uy tín cho mọi khách hàng 
+                    Trần vách thạch cao đẹp uy tín tới mọi khách hàng 
                 </Typography>
                 <br/>
                 <Typography>
@@ -180,7 +182,20 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
             </CardContent>
         </Card>
         <ProductCategory products={props.products} category="Thi công vách" showPrice={true}/> 
-
+        <Card>
+            <CardContent>
+                <Typography>
+                    Có thể nói các mức giá được nêu trên của chúng tôi được đánh giá là vô cùng ưu đãi trong thời kì dịch bệnh hiện nay và là giá chính xác trong năm 2021. Để có được dịch vụ với giá tốt nhất đến gia chủ, Tân Hải Vân đã có các giải pháp cắt giảm chi phí tối ưu nhất ví dụ như công ty đã đồng hành với Vĩnh Tường trong suốt một thập kỉ với tư cách là một trong những nhà phân phối lớn nhất cả nước. Ngoài ra Tân Hải Vân cũng sản xuất các sản phẩm khung xương, tấm trần thả PVC mang thương hiệu của chúng tôi có thể giúp cắt giảm chi phí vật tư đầu vào theo yêu cầu của gia chủ.  
+                </Typography>
+            </CardContent>
+        </Card>
+        <Card
+        className={classes.botNav}>
+                <CardContent>
+                    <Typography>Liên hệ</Typography>
+                </CardContent>
+                
+        </Card> 
         </main>
     )
 }

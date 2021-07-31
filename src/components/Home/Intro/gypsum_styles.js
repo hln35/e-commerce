@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core";
+import zIndex from "@material-ui/core/styles/zIndex";
 
 const useStyles = makeStyles((theme) => ({
     main:{
@@ -18,6 +19,17 @@ const useStyles = makeStyles((theme) => ({
         height:0,
         width:"100%",
         paddingTop:'60%'
+    },
+    icon:{
+        position:"fixed",
+        transform:"scale(0.15,0.15)",
+        bottom:"10%",
+        right:-110,  
+        zIndex:"1"
+    },
+    botNav:{
+        position:"absolute",
+        width:'100%'
     }
 
 }))

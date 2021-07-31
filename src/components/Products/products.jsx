@@ -1,12 +1,12 @@
 import React from 'react';
-import {Grid, MenuItem, Select, InputLabel, FormControl} from '@material-ui/core';
+import {Grid, MenuItem, Select, InputLabel, FormControl,Button, Link} from '@material-ui/core';
 import Product from './Product/product';
 import useStyles from './productsstyle';
 import { commerce_1 } from '../../lib/commerce';
 import { useEffect, useState } from 'react';
 import { LinearProgress } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
-
+import zalo from '../../assests/zalo.png'
 
 const Products = (props) => {
     const classes = useStyles();
@@ -56,6 +56,8 @@ const Products = (props) => {
             <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, trang chủ, 2021"/>
         </Helmet>
         <div className={classes.toolbar}></div>
+        <Button className={classes.icon} style={{color:"#479cc9"}} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo}/></Button>
+
          <FormControl className={classes.formControl}>
          <InputLabel id="simple-select-label">Danh Mục Sản Phẩm</InputLabel> 
         <Select fullWidth

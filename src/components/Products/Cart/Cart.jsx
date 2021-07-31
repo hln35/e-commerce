@@ -3,6 +3,7 @@ import { Grid, Typography, Card, CardContent, CardMedia, Container, Link, Button
 import useStyles from './cart_styles';
 import CartItem from './CartItem/CartItem';
 import {Helmet} from "react-helmet";
+import zalo from '../../../assests/zalo.png'
 const Cart= (props) => {
     const classes = useStyles();
     const UnFilled = () =>(
@@ -56,6 +57,7 @@ const Cart= (props) => {
             Your shopping cart is:
         </Typography>
         {!props.cart.line_items.length ? <UnFilled/> : <Filled/>}
+        <Button className={classes.icon} style={{color:"#479cc9"}} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo}/></Button>
 
         </Container>
         )

@@ -25,7 +25,16 @@ const useStyles = makeStyles((theme) => ({
           marginBottom: theme.spacing(6),
           padding: theme.spacing(3),
         },
-      },}
+      },
+      icon:{
+        position:"fixed",
+        transform:"scale(0.15,0.15)",
+        bottom:"10%",
+        right:-110,  
+        zIndex:"1"
+    }
+    }
+
     
 ))
 

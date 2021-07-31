@@ -29,7 +29,14 @@ const useStyles=makeStyles((theme) =>({
   buttons:{
     display:'flex',
     justifyContent:'space-between'
-  }
+  },
+  icon:{
+    position:"fixed",
+    transform:"scale(0.15,0.15)",
+    bottom:"10%",
+    right:-110,  
+    zIndex:"1"
+}
 }))
 
 export default useStyles
