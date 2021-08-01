@@ -80,8 +80,32 @@ const useStyles = makeStyles((theme) => ({
       transform:"scale(0.15,0.15)",
       bottom:"10%",
       right:-110,  
-      zIndex:"1"
+      zIndex:"1",
+      animation: `$shake 300ms ${theme.transitions.easing.easeInOut}`,
+      animationIterationCount: "infinite",
+  },
+  "@keyframes shake":{
+    "0%": { transform: "translate(1px, 1px) rotate(0deg) scale(0.15,0.15)" },
+    "20%": { transform: "translate(-3px, 0px) rotate(1deg) scale(0.15,0.15)" },
+    "40%": { transform: "translate(1px, -1px) rotate(1deg) scale(0.15,0.15)" },
+    "60%": { transform: "translate(-3px, 1px) rotate(0deg) scale(0.15,0.15)" },
+    "80%": { transform: "translate(-1px, -1px) rotate(1deg) scale(0.15,0.15)" },
+    "100%": { transform: "translate(1px, -2px) rotate(-1deg) scale(0.15,0.15)"}
+  },
+
+  addItem:{
+    backgroundColor:"#D0011B"
+  },
+  addItemDisabled:{
+    backgroundColor:"#bd9997"
+  },
+  addItemMobile:{
+    backgroundColor:"#FDDC00"
+  },
+  addItemMobileDisabled:{
+    backgroundColor:"#fffdf0"
   }
+
 
     
      
@@ -122,7 +146,7 @@ const ProductDetail =(props) =>{
               <CardMedia
                className={classes.cover}
                image={imageUrl}
-               title="Live from space album cover"
+               title="thạch cao Tân Hải Vân"
              />
              
 
@@ -132,16 +156,16 @@ const ProductDetail =(props) =>{
                    {props.product.name}
                  </Typography>
                  <Typography variant="subtitle1" color="textSecondary">
-                   Mac Miller
-                 </Typography>
+                   {props.product.is.pay_what_you_want ? "Liên hệ để biết giá sản phẩm hiện tại" : props.product.price.formatted_with_code}
+                 </Typography> 
                </CardContent>
                <div className={classes.controls}>
-                 <Button style={{background:"#D0011B"}} variant='contained' onClick={() => {props.onAddToCart(props.product.id)}}>
+                 <Button className={props.product.is.pay_what_you_want ? classes.addItemDisabled : classes.addItem} variant='contained' onClick={() => {props.onAddToCart(props.product.id)}} disabled={props.product.is.pay_what_you_want}>
                  <IconButton style={{color:"#FFFFFF"}}>
                   <AddShoppingCart/>
                   </IconButton>
                   <Typography style={{color:"#FFFFFF"}} variant='secondary'  >
-                  Them vao gio hang
+                  Thêm vào giỏ hàng
                   </Typography>
                  </Button >
                  <div className={classes.playIcon}/>
@@ -150,7 +174,7 @@ const ProductDetail =(props) =>{
                   <Phone/>
                   </IconButton>
                   <Typography style={{color:"#D0011B"}} variant='secondary'  >
-                  Lien he
+                  Liên hệ
                   </Typography>
                  </Button>
                  
@@ -200,13 +224,15 @@ const ProductDetail =(props) =>{
                  <Typography variant='h6'>
                  {props.product.name}
                  </Typography>
-                 
+                 <Typography variant="subtitle1" color="textSecondary">
+                   {props.product.is.pay_what_you_want ? "Liên hệ để biết giá sản phẩm hiện tại" : props.product.price.formatted_with_code}
+                 </Typography>
                </CardContent>
              </Card>
              <Card>
                <CardContent>
                 <Typography variant='h6' gutterBottom style={{fontFamily:"Time New Roman"}}>
-                 Mo ta san pham
+                 Mô tả sản phẩm
                  </Typography>
                  <Typography variant='h7' dangerouslySetInnerHTML={{ __html:props.product.description}} style={{fontFamily:"Time New Roman"}}>
                  
@@ -218,8 +244,8 @@ const ProductDetail =(props) =>{
                                   showLabels
                                   className={classes.bottomNavigation}
                                   >
-               <BottomNavigationAction label="Them vao gio" icon={<AddShoppingCart/>} style={{backgroundColor:"#FDDC00"}} onClick={() => {props.onAddToCart(props.product.id)}}/>
-               <BottomNavigationAction label="Lien he" icon={<Phone/>} href="/contact"/>
+               <BottomNavigationAction label="Thêm vào giỏ" component={Button} icon={<AddShoppingCart />} className={props.product.is.pay_what_you_want ? classes.addItemMobileDisabled : classes.addItemMobile} onClick={() => {props.onAddToCart(props.product.id)}} disabled={props.product.is.pay_what_you_want}/>
+               <BottomNavigationAction label="Liên hệ" icon={<Phone/>} href="/contact"/>
              </BottomNavigation>
            </Hidden>
           

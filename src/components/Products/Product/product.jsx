@@ -72,7 +72,7 @@ const Product = (props) =>{
                     </Typography>
                 </Grid>
                 
-                {props.showPrice && <Grid item >
+                {props.showPrice && !props.product.is.pay_what_you_want && <Grid item >
                     <Typography variant='body2' color='textSecondary' >
                         {props.product.price.formatted_with_symbol}
                         
@@ -90,7 +90,7 @@ const Product = (props) =>{
             </Typography>
         </CardContent>*/}
         <CardActions className={classes.cardAction}>
-            <IconButton onClick={() => {props.handleAddToCart(props.product.id, 1)}}>
+            <IconButton onClick={() => {props.handleAddToCart(props.product.id, 1)}} disabled={props.product.is.pay_what_you_want}>
                 <AddShoppingCart/>
             </IconButton>
         </CardActions>

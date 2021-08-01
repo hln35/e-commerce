@@ -88,7 +88,7 @@ const App = () => {
     
   }, []);
 
-  console.log(cartItems)
+  console.log(products)
 
  
    
@@ -106,9 +106,6 @@ const App = () => {
           </Route>
           <Route path='/cart'>
             <Cart cart={cartItems}  onHandleAdd={handleUpdateCart} onRemoveItem={removeItem} onEmpty={handleEmpty}/>
-          </Route>
-          <Route path='/test'>
-            <ProductDetail/>
           </Route>
           {/*<Route path= {`/${product.id}`}>
             <ProductDetail product={product}/>
