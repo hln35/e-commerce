@@ -13,7 +13,11 @@ const useStyles = makeStyles((theme) => ({
 
   formControl: {
     width:"50%",
-    paddingBottom:'5%'
+    paddingBottom:'5%',
+    [theme.breakpoints.down(500)]:{
+        width:"70%",
+        paddingBottom:"10%"
+    }
   },
   icon:{
     position:"fixed",
@@ -31,7 +35,11 @@ const useStyles = makeStyles((theme) => ({
   "60%": { transform: "translate(-3px, 1px) rotate(0deg) scale(0.15,0.15)" },
   "80%": { transform: "translate(-1px, -1px) rotate(1deg) scale(0.15,0.15)" },
   "100%": { transform: "translate(1px, -2px) rotate(-1deg) scale(0.15,0.15)"}
-}
+},
+  highlight:{
+    color:"red",
+    justifyContent:"space-between"
+  }
 }));
 
 export default useStyles;

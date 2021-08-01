@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, MenuItem, Select, InputLabel, FormControl,Button, Link} from '@material-ui/core';
+import {Grid, MenuItem, Select, InputLabel, FormControl,Button, Link, Typography, Icon} from '@material-ui/core';
 import Product from './Product/product';
 import useStyles from './productsstyle';
 import { commerce_1 } from '../../lib/commerce';
@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { LinearProgress } from '@material-ui/core';
 import { Helmet } from 'react-helmet';
 import zalo from '../../assests/zalo.png'
-
+import WhatshotIcon from '@material-ui/icons/Whatshot';
 const Products = (props) => {
     const classes = useStyles();
     const [category, setCategory] = useState();
@@ -66,6 +66,8 @@ const Products = (props) => {
                 onChange={handleChange}
                 value={category}    >
             {categories.map((category) => (
+                ((category.name==="Thi công trần")||(category.name==="Thi công vách")) ?
+                <MenuItem value={category.name} className={ classes.highlight}>{`${category.name}`}<Icon><WhatshotIcon/></Icon></MenuItem>:
                 <MenuItem value={category.name}>{category.name}</MenuItem>
             ))}
         </Select> 
