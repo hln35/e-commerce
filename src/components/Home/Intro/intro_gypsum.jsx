@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Card, CardContent, CardMedia, Typography, Grid, ListItemAvatar, List, ListItemText, ListItem, Link, Icon, Button, BottomNavigation} from '@material-ui/core'
+import {Card, CardContent, CardMedia, Typography, Grid, ListItemAvatar, List, ListItemText, ListItem, Link, Icon, Button, BottomNavigation, Badge} from '@material-ui/core'
 import useStyles from './gypsum_styles'
 import {Home, Phone} from '@material-ui/icons'
 import ProductCategory from '../../Products/product_category'
@@ -18,7 +18,7 @@ const IntroGypsum = (props) => {
             <meta name="description" content="Công ty TNHH xây lắp và thương mại Tân Hải Vân chuyên cung cấp vật tư giá đến các công trình trên cả nước, đồng thời cung cấp các giải pháp toàn diện về trần vách thạch cao đến các hộ gia đình Việt Nam "/>
             <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, thi công, giá rẻ, 2021"/>
         </Helmet>
-        <Button className={classes.icon} style={{color:"#479cc9"}} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo}/></Button>
+        <Button style={{color:"#479cc9"}} className={classes.icon} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo} /></Button>
         <Card className={classes.content}>
             <CardContent>
                 <Typography variant="h2">
@@ -161,7 +161,7 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
                 <Typography style={{fontWeight:'bold'}}>
                     Công ty TNHH Xây lắp và Thương mại Tân Hải Vân với gần 20 năm kinh nghiệm gắn bó với ngành trần và đang là một trong những trung tâm phân phối lớn nhất miền bắc cam kết sẽ cung cấp cho công trình của bạn nguồn vật tư chất lượng với giá thành vô cùng ưu đãi.
                  </Typography>
-                 <Typography>
+                 <Typography style={{color:"red"}}>
                      Dưới đây là giá thi công trần thạch cao của chúng tôi.  
                  </Typography>
                  <Typography color='textSecondary'>

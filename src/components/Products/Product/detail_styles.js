@@ -30,6 +30,14 @@ const useStyles = makeStyles((theme) =>({
         bottom:"10%",
         right:-110,  
         zIndex:"1"
+    },
+    "@keyframes shake":{
+        "0%": { transform: "translate(1px, 1px) rotate(0deg) scale(0.15,0.15)" },
+        "20%": { transform: "translate(-3px, 0px) rotate(1deg) scale(0.15,0.15)" },
+        "40%": { transform: "translate(1px, -1px) rotate(1deg) scale(0.15,0.15)" },
+        "60%": { transform: "translate(-3px, 1px) rotate(0deg) scale(0.15,0.15)" },
+        "80%": { transform: "translate(-1px, -1px) rotate(1deg) scale(0.15,0.15)" },
+        "100%": { transform: "translate(1px, -2px) rotate(-1deg) scale(0.15,0.15)"}
     }
 }));
 
