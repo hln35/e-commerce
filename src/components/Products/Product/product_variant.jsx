@@ -62,7 +62,7 @@ const ProductVariant = (props) =>{
       
                      
                     <Link to={`/${product.id}`}>
-                        <CardMedia  className={classes.media} image={image.url} />
+                        <CardMedia  className={classes.media} image={image.url} title={product.name} alt={product.name} />
      
                    </Link>
                 </Card>

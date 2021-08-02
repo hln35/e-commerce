@@ -57,7 +57,7 @@ const Product = (props) =>{
       
         <div className={classes.space}/>
         <Link to={`/${props.product.id}`}>
-        <CardMedia  className={classes.media} image={props.product.assets[0].url} title={props.product.name} onClick={() => {props.handleGetId(props.product)}} >
+        <CardMedia  className={classes.media} image={props.product.assets[0].url} title={props.product.name} alt={props.product.name} onClick={() => {props.handleGetId(props.product)}} >
         
         </CardMedia>
         </Link>

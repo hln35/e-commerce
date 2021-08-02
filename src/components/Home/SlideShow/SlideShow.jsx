@@ -37,7 +37,7 @@ const SlideShow  = () =>{
         <Card >
             
             <Grid className={classes.root}>
-                <CardMedia className={classes.media} image={image_list[current]} title={"Thạch cao"}>
+                <CardMedia className={classes.media} image={image_list[current]} title={"Thạch cao"} alt={"Thạch cao"}>
                 
                 </CardMedia>
             </Grid>

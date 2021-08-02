@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, IconButton, Badge, Typography, makeStyles, Hidden, Button, CssBaseline} from '@material-ui/core';
-import logo from '../../assests/vt_dropdown.png';
+import logoTHV from '../../assests/logoTHV2_cropped.png';
 import {AddShoppingCart} from '@material-ui/icons';
 import SimpleMenu from './NavItem/NavItem';
 import Drawer from './NavItem/NavItemsDrawer';
@@ -45,11 +45,9 @@ const Appbar = (props) => {
             <Toolbar  >
     
                 <Button href='/'>
-                <Typography variant='h4' style={{fontWeight:'bold'}}>
-                        THV
-                    </Typography>
+               
                     
-                    {/* <img src={logo}/> */}
+                    <img src={logoTHV}/>
                     
                 </Button>
                 <div className={classes.root}></div>

@@ -147,6 +147,7 @@ const ProductDetail =(props) =>{
                className={classes.cover}
                image={imageUrl}
                title="thạch cao Tân Hải Vân"
+               alt="thạch cao Tân Hải Vân"
              />
              
 
@@ -248,13 +249,7 @@ const ProductDetail =(props) =>{
                <BottomNavigationAction label="Liên hệ" icon={<Phone/>} href="/contact"/>
              </BottomNavigation>
            </Hidden>
-          
-           
            </>
-            
-            
-            
-        
     )
 
 }

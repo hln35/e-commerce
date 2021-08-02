@@ -6,7 +6,7 @@ const CartItem =(props) =>{
     const classes = useStyles();
     return(
         <Card >
-            <CardMedia className={classes.media} image={props.item.media.source}/>
+            <CardMedia className={classes.media} image={props.item.media.source} titile={props.item.name} alt={props.item.name}/>
             <CardContent className={classes.cardContent}>
                 <Typography variant='h8' style={{fontFamily: "Georgia"}}>
                 {props.item.name}

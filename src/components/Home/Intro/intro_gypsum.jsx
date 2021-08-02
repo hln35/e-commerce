@@ -26,7 +26,7 @@ const IntroGypsum = (props) => {
                 </Typography>
                 <br/>
                 <Typography>
-                Trong thiết kế xây dựng hiện đại. Thạch cao ngày càng được ưa chuộng và ứng dụng rộng rãi ví dụ như vách hay trần thạch cao bởi những tính năng ưu việt như nhẹ và có khả năng chống ẩm, chống cháy tốt, cách âm hiệu quả. Ngoài ra, sự đa dạng về mẫu mã cũng khiến cho trần thạch cao ngày càng được lòng khách hàng.
+                Trong thiết kế xây dựng hiện đại, có một vật liệu ngày càng được ưa chuộng và ứng dụng rộng rãi từ các tòa nhà chung cư lớn đến nhà riêng đó chính là thạch cao. Chúng ta có thể dễ dàng bắt gặp thạch cao tại các công trình chuẩn bị hoàn thiện khi các chúng sẽ chuẩn bị được lắp thành vách ngăn hoặc trần. Không phải ngẫu nhiên thạch cao trở nên phổ biến như vậy, nó sở hữu những tính năng ưu việt nhờ được nghiên cứu cải thiện bởi những chuyên gia vật liệu đầu ngành và sản xuất bởi những dây chuyền tối tân tại các nhà máy tiêu chuẩn. Một vài tính chất hiện đại có thể nói như rất nhẹ, có khả năng chống ẩm, chống cháy tốt, hay cách âm hiệu quả. Ngoài ra, sự đa dạng về mẫu mã cũng khiến cho trần thạch cao ngày càng được lòng khách hàng.
 Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần thạch cao cũng như nghe đến các thương hiệu thạch cao nổi tiếng trên thế giới nhưng vẫn muốn cân nhắc sử dụng thạch cao cho ngôi nha của mình thì đây chính là bài viết Tân Hải Vân dành cho quý vị. 
                 </Typography>
                 <Typography style={{fontWeight:"bold"}}>
@@ -146,7 +146,7 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
                     - Đây cũng là lựa chọn giúp gia chủ dễ dàng kiểm tra, bảo dưỡng hệ thống điện, không khí phía trên trần.
                 </Typography>
             </CardContent>
-            <CardMedia image={TranTha} className={classes.media} title={"trần thạch cao thả"} alt="trần thả"/>
+            <CardMedia image={TranTha} className={classes.media} title={"trần thạch cao thả"} alt="trần thạch cao thả"/>
             <CardContent>
                 <Typography color='primary' component={Link} href="/">
                 Dưới đây là họa tiết các mẫu tấm ánh kim mà Tân Hải Vân đang phân phối. 
