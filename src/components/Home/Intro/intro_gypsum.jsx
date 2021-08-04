@@ -1,24 +1,42 @@
 import React, { useState } from 'react'
-import {Card, CardContent, CardMedia, Typography, Grid, ListItemAvatar, List, ListItemText, ListItem, Link, Icon, Button, BottomNavigation, Badge} from '@material-ui/core'
+import {Card, CardContent, CardMedia, Typography, Grid, ListItemAvatar, List, ListItemText, ListItem, Link, IconButton, Button, BottomNavigation, Badge, Icon, CardActions, CircularProgress} from '@material-ui/core'
 import useStyles from './gypsum_styles'
-import {Home, Phone} from '@material-ui/icons'
+import {Home, Phone, Cancel} from '@material-ui/icons'
 import ProductCategory from '../../Products/product_category'
 import TranChim from '../../../assests/tran_chim.png'
 import TranTha from '../../../assests/tran-thach-cao-tha-1.jpg'
 import ProductVariant from '../../Products/Product/product_variant'
+import ProductSummary from '../../Products/product_summary'
 import zalo from '../../../assests/zalo.png'
 import { Helmet } from 'react-helmet'
 const IntroGypsum = (props) => {
     const classes = useStyles()
-    
+    const [open, setOpen] = useState(true)
+    const handleClose = () => {
+        setOpen((prev)=>!prev)
+    }
     return(
-        <main className={classes.main}>
+        <main className={classes.root} >
+        
         <Helmet>
             <title>Thi công trần vách thạch cao| Công ty Tân Hải Vân</title>
             <meta name="description" content="Công ty TNHH xây lắp và thương mại Tân Hải Vân chuyên cung cấp vật tư giá đến các công trình trên cả nước, đồng thời cung cấp các giải pháp toàn diện về trần vách thạch cao đến các hộ gia đình Việt Nam "/>
             <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, thi công, giá rẻ, 2021"/>
         </Helmet>
+        {open && <Card className={classes.ad}>
+            <CardActions className={classes.closeButton}>
+            <IconButton  size="medium" onClick={handleClose}>
+                <Cancel fontSize="large" style={{color:"white"}}/>
+                
+            </IconButton>
+            </CardActions>
+            <Typography variant="h3" style={{fontFamily:"Fira Sans"}}>Giá sốc mùa dịch</Typography>
+            {props.products.length ?  
+            <ProductSummary products={props.products} category="Thi công vách" showPrice={true} /> : <div style={{display: 'flex', justifyContent: 'center'}}><CircularProgress /></div>}
+            <ProductSummary products={props.products} category="Thi công trần" showPrice={true}/>
+        </Card>}
         <Button style={{color:"#479cc9"}} className={classes.icon} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo} /></Button>
+        <main className={classes.main} style={open ? {filter:"brightness(30%)"} : {filter:"brightness(100%)"}}>
         <Card className={classes.content}>
             <CardContent>
                 <Typography variant="h2">
@@ -203,13 +221,13 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
             background: "linear-gradient(90deg, rgba(219,127,237,1) 0%, rgba(117,117,235,1) 35%, rgba(0,212,255,1) 100%)",
             borderRadius:"0"}}
             className={classes.banner}>
-            
                 <CardContent  component={Link} href="/contact">
                     <Typography variant="h6" style={{fontWeight:"bold", color:"#913d00"}} >Để được tư vấn chi tiết, cụ thể hơn nữa, bạn có thể liên hệ với chúng tôi (tại đây).</Typography>
                 </CardContent>
                 
         </Card> 
         <br/>
+        </main>
         </main>
     )
 }

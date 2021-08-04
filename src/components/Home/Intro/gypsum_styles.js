@@ -4,12 +4,14 @@ import zIndex from "@material-ui/core/styles/zIndex";
 const useStyles = makeStyles((theme) => ({
     main:{
         width:'auto',
-        marginTop: '5%',
+        marginTop: '2%',
         [theme.breakpoints.up(900 + theme.spacing(2) * 2)]: {
             width: 900,
             marginLeft: 'auto',
             marginRight: 'auto',
           },
+          
+          
     },
     content:{
         marginTop:theme.spacing(8),
@@ -44,6 +46,34 @@ const useStyles = makeStyles((theme) => ({
         "60%": { transform: "translate(-3px, 1px) rotate(0deg) scale(0.15,0.15)" },
         "80%": { transform: "translate(-1px, -1px) rotate(1deg) scale(0.15,0.15)" },
         "100%": { transform: "translate(1px, -2px) rotate(-1deg) scale(0.15,0.15)"}
+    },
+    root:{
+        display:"flex"
+    },
+    ad:{
+        marginTop:"5%",
+        position:"fixed",
+        width:"90%",
+        height:"70%",
+        zIndex:1,
+        marginLeft:"auto",
+        transform:'translate(4%,0%)',
+        overflow:"auto",
+        background: "rgb(227,225,54)",
+        background: "linear-gradient(90deg, rgba(227,225,54,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)"
+        
+    },
+    closeButton:{
+        position:"fixed",
+        justifyContent:"flex-end",
+        right:"3%"
+        
+        
+        
+    },
+    cardImg:{
+        width:"50%",
+        height:"50%"
     }
 
 }))
