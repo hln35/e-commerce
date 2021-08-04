@@ -40,6 +40,7 @@ const MyMap = () => {
     <main className={classes.root}>
         <Helmet>
             <title>Thông tin liên hệ| Công ty Tân Hải Vân </title>
+            <link rel="canonical" href="https://tanhaivanltd.com/contact" />
             <meta name="description" content="Thông tin liên hệ với công ty TNHH xây lắp và thương mại Tân Hải Vân"/>
             <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, liên hệ, 2021"/>
         </Helmet>

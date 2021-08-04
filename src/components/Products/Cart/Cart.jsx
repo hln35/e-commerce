@@ -48,6 +48,7 @@ const Cart= (props) => {
                 <title>
                    Giỏ hàng | Công ty Tân Hải Vân
                 </title>
+                <link rel="canonical" href="https://tanhaivanltd.com/cart" />
                 <meta name="description" content="Giỏ hàng của hệ thống mua hàng online của công ty Tân Hải Vân"/>
                 <meta name="keywords" content="giỏ hàng, thạch cao, vĩnh tường, trần thạch cao, vách thạch cao"/>
             </Helmet>

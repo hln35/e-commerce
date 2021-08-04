@@ -12,6 +12,7 @@ const Intro =() =>{
                 <title>
                    Giới thiệu | Công ty Tân Hải Vân
                 </title>
+                <link rel="canonical" href="https://tanhaivanltd.com/intro" />
                 <meta name="description" content="Về công ty TNHH xây lắp và thương mại Tân Hải Vân"/>
                 <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, giới thiệu"/>
             </Helmet>

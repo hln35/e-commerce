@@ -20,6 +20,7 @@ const IntroGypsum = (props) => {
         
         <Helmet>
             <title>Thi công trần vách thạch cao| Công ty Tân Hải Vân</title>
+            <link rel="canonical" href="https://tanhaivanltd.com/thachcao" />
             <meta name="description" content="Công ty TNHH xây lắp và thương mại Tân Hải Vân chuyên cung cấp vật tư giá đến các công trình trên cả nước, đồng thời cung cấp các giải pháp toàn diện về trần vách thạch cao đến các hộ gia đình Việt Nam "/>
             <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, thi công, giá rẻ, 2021"/>
         </Helmet>

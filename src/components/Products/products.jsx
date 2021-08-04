@@ -52,6 +52,7 @@ const Products = (props) => {
     <main className={classes.content}>
         <Helmet>
             <title>Trang chủ| Công ty Tân Hải Vân| Mang đến các giải pháp trần vách thạch cao tốt nhất </title>
+            <link rel="canonical" href="https://tanhaivanltd.com/" />
             <meta name="description" content="Công ty TNHH xây lắp và thương mại Tân Hải Vân với kinh nghiệm gần 20 năm trong ngành trần vách thạch cao sẽ đem đến sự hài lòng cho mọi công trình"/>
             <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, trang chủ, 2021"/>
         </Helmet>
