@@ -25,12 +25,14 @@ const IntroGypsum = (props) => {
             <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, thi công, giá rẻ, 2021"/>
         </Helmet>
         {open && <Card className={classes.ad}>
-            <CardActions className={classes.closeButton}>
-            <IconButton  size="medium" onClick={handleClose}>
-                <Cancel fontSize="large" style={{color:"white"}}/>
+             <CardActions className={classes.closeButton}>
+             {props.products.length ? <IconButton  size="medium" onClick={handleClose}>
+             <Cancel fontSize="large" style={{color:"white"}}/> 
                 
-            </IconButton>
+            </IconButton> : <IconButton/> 
+}
             </CardActions>
+            
             <Typography variant="h3" style={{fontFamily:"Fira Sans"}}>Giá sốc mùa dịch</Typography>
             {props.products.length ?  
             <ProductSummary products={props.products} category="Thi công vách" showPrice={true} /> : <div style={{display: 'flex', justifyContent: 'center'}}><CircularProgress /></div>}
