@@ -21,7 +21,7 @@ const IntroGypsum = (props) => {
         <Helmet>
             <title>Thi công trần vách thạch cao| Công ty Tân Hải Vân</title>
             <link rel="canonical" href="https://tanhaivanltd.com/thachcao" />
-            <meta name="description" content="Công ty TNHH xây lắp và thương mại Tân Hải Vân chuyên cung cấp vật tư giá đến các công trình trên cả nước, đồng thời cung cấp các giải pháp toàn diện về trần vách thạch cao đến các hộ gia đình Việt Nam "/>
+            <meta name="description" content="Công ty TNHH xây lắp và thương mại Tân Hải Vân chuyên cung cấp thạch cao đến các công trình trên cả nước, đồng thời cung cấp các giải pháp toàn diện về trần vách thạch cao đến các hộ gia đình Việt Nam "/>
             <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, thi công, giá rẻ, 2021"/>
         </Helmet>
         {open && <Card className={classes.ad}>
@@ -43,18 +43,21 @@ const IntroGypsum = (props) => {
         <Card className={classes.content}>
             <CardContent>
                 <Typography variant="h2">
-                    Trần vách thạch cao đẹp uy tín tới mọi khách hàng 
+                    Trần vách thạch cao đẹp uy tín đa dạng tới mọi khách hàng 
                 </Typography>
                 <br/>
                 <Typography>
-                Trong thiết kế xây dựng hiện đại, có một vật liệu ngày càng được ưa chuộng và ứng dụng rộng rãi từ các tòa nhà chung cư lớn đến nhà riêng đó chính là thạch cao. Chúng ta có thể dễ dàng bắt gặp thạch cao tại các công trình chuẩn bị hoàn thiện khi các chúng sẽ chuẩn bị được lắp thành vách ngăn hoặc trần. Không phải ngẫu nhiên thạch cao trở nên phổ biến như vậy, nó sở hữu những tính năng ưu việt nhờ được nghiên cứu cải thiện bởi những chuyên gia vật liệu đầu ngành và sản xuất bởi những dây chuyền tối tân tại các nhà máy tiêu chuẩn. Một vài tính chất hiện đại có thể nói như rất nhẹ, có khả năng chống ẩm, chống cháy tốt, hay cách âm hiệu quả. Ngoài ra, sự đa dạng về mẫu mã cũng khiến cho trần thạch cao ngày càng được lòng khách hàng.
-Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần thạch cao cũng như nghe đến các thương hiệu thạch cao nổi tiếng trên thế giới nhưng vẫn muốn cân nhắc sử dụng thạch cao cho ngôi nha của mình thì đây chính là bài viết Tân Hải Vân dành cho quý vị. 
+                Trong thiết kế xây dựng hiện đại, có một vật liệu ngày càng được ưa chuộng và ứng dụng rộng rãi từ các tòa nhà chung cư lớn đến nhà riêng đó chính là thạch cao. Không phải ngẫu nhiên thạch cao trở nên phổ biến như vậy, nó sở hữu những tính năng ưu việt nhờ được nghiên cứu cải thiện bởi những chuyên gia vật liệu đầu ngành và sản xuất bởi những dây chuyền tối tân tại các nhà máy tiêu chuẩn. Một vài tính chất hiện đại có thể nói đến khả năng chống ẩm, chống cháy tốt, hay cách âm hiệu quả. Ngoài ra, sự đa dạng về mẫu mã cũng khiến cho trần thạch cao ngày càng được lòng khách hàng.
+Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần thạch cao và vẫn muốn cân nhắc sử dụng thạch cao cho ngôi nha của mình thì đây chính là bài viết Tân Hải Vân dành cho quý vị. 
                 </Typography>
                 <Typography style={{fontWeight:"bold"}}>
                 Đồng thời Tân Hải Vân cũng sẽ giới thiệu về các gói thi công trần vách thạch cao hoàn thiện của công ty chúng tôi.
                 </Typography>
                 <Typography style={{color:'#ed9f51'}}>
-                    Với tư cách là một trong những trung tâm phân phối lớn nhất của Vĩnh Tường tại miền bắc và có gần 20 năm hoạt động trong lĩnh vực trần, chúng tôi có đội ngũ thợ thi công kinh nghiệm cùng nguồn hàng cạnh tranh với khả năng hoàn thành những công trình với quy chuẩn khắt khe nhất trên một mức chi phí phù hợp.
+                    Với tư cách là một trong những trung tâm phân phối lớn nhất của Vĩnh Tường tại miền bắc và có gần 20 năm hoạt động trong lĩnh vực trần, chúng tôi có đội ngũ thợ thi công kinh nghiệm cùng nguồn hàng cạnh tranh với khả năng hoàn thành những công trình với quy chuẩn khắt khe nhất trên một mức chi phí phù hợp. 
+                </Typography>
+                <Typography>
+                Đối với khách hàng là các đại lý, chúng tôi có hệ thống kho bãi lớn luôn đảm bảo có một nguồn hàng dồi dào. Chúng tôi cũng luôn áp dụng tối đa các chương trình của Vĩnh Tường đến khách hàng nhằm đảm bảo có hàng với giá chiết khấu tới các đại lý.Tân Hải Vân cũng đã đầu tư một đội xe tải ổn định giúp đơn hàng sẽ được vận chuyển không chút chậm trễ. 
                 </Typography>
                 <br/>
                 <Typography variant="h6" style={{color:'#b5934c'}}>
@@ -101,14 +104,17 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
                 <Typography>
                 - Thạch cao có khả năng linh động cao, vô cùng dễ dàng dễ tháo lắp. Vậy nên hệ thống trần vách thạch cao được lắp đặt nhanh gọn mà không ảnh hưởng tới cấy trúc trần ngôi nhà cũng như hệ thống dầm chung của cả tòa nhà. 
                 </Typography>
-                <Typography>
+                {/* <Typography>
                 - Trần có độ an toàn cao nhờ khung xương trần vững chắc. Không chứa các chất độc hại trong quá trình sử dụng hoặc phát ra khí độc.
-                </Typography>
+                </Typography> */}
                 <Typography>
-                - Về khả năng chống cháy, thạch cao được xem là một nguyên liệu tuyệt vời nhờ vào lõi đã được điều chỉnh khiến nó có tác dụng làm chậm lại quá trình truyền nhiệt và sự lan truyền của lửa, có thể lên tới 150 phút, một thứ tối quan trọng khi không may xảy ra hỏa hoạn. Ngoài ra, tính năng cách nhiệt của tấm thạch cao còn đóng vai trò chống nóng và giảm lượng điện năng tiêu thụ của điều hòa vào mùa hè.   
+                - Về khả năng chống cháy, thạch cao được xem là một nguyên liệu tuyệt vời nhờ vào lớp lõi đã được điều chỉnh khiến nó có tác dụng làm chậm lại quá trình truyền nhiệt và sự lan truyền của lửa, có thể lên tới 150 phút, một thứ tối quan trọng khi không may xảy ra hỏa hoạn. Ngoài ra, tính năng cách nhiệt của tấm thạch cao còn đóng vai trò chống nóng và giảm lượng điện năng tiêu thụ của điều hòa vào mùa hè.   
                 </Typography>
-                <Typography>
+                {/* <Typography>
                    - Thạch cao cũng có tính tiêu âm, với tác dụng cản trở sự lan truyền của âm thanh nên cũng được áp dụng rộng rãi trong các không gian sinh hoạt cần sự riêng tư như chung cư, văn phòng,...
+                </Typography> */}
+                <Typography>
+                    - Ngoài ra, tấm Siêu Bảo Vệ mới xuất hiện còn giúp thanh lọc không khí trong phòng bằng cách hấp thu các khí có hại và chuyển hóa thành khí trơ. Quá trình xảy ra liên tục có vòng đời lên đến 50 năm.  
                 </Typography>
                 <Typography>
                 - Tuổi thọ của trần nhà thạch cao cũng tương đồng với độ bền của đồ nội thất nên giúp tiết kiệm được tối đa chi phí bảo dưỡng cũng như đảm bảo an toàn cho những thành viên trong gia đình. 
