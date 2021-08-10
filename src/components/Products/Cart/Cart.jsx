@@ -9,8 +9,8 @@ const Cart= (props) => {
     const UnFilled = () =>(
         <>
         <Typography variant='subtitle1' className={classes.title}>
-            You have no items in your shopping cart, 
-            <Link href='/'>please find more here</Link>
+            Bạn đang không có sản phẩm nào trong giỏ hàng, 
+            <Link href='/'>bạn có thể xem thêm các sản phẩm tại đây</Link>
         </Typography>
         </>
     );
@@ -27,15 +27,15 @@ const Cart= (props) => {
         </Grid>
         <CardContent className={classes.cardDetails}>
                 <Typography variant='h4'>
-                    Subtotal: 
+                    Tổng: 
                     {props.cart.subtotal.formatted_with_symbol}
                 </Typography>
                 <div >
                 <Button color='secondary' variant='contained' className={classes.emptyButton} onClick={props.onEmpty}>    
-                    Emty Cart
+                    Xóa giỏ hàng
                 </Button>
                 <Button component={Link} href='/checkout' color='primary' variant='contained'  className={classes.checkoutButton}>
-                    Check Out
+                    Thanh toán
                 </Button>
                 </div>
         </CardContent>
@@ -55,7 +55,7 @@ const Cart= (props) => {
         <CssBaseline/>
         <div className={classes.toolbar}/>
         <Typography gutterBottom variant='h4' style={{fontFamily:'Time New Roman'}}>
-            Your shopping cart is:
+            Giỏ hàng của bạn:
         </Typography>
         {!props.cart.line_items.length ? <UnFilled/> : <Filled/>}
         <Button className={classes.icon} style={{color:"#479cc9"}} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo}/></Button>
