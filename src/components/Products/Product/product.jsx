@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     },
     cardAction:{
         display: 'flex',
-        justifyContent:'flex-end',
+        justifyContent:'space-between',
     },
     space:{
       height:30
@@ -89,7 +89,13 @@ const Product = (props) =>{
             
             </Typography>
         </CardContent>*/}
+        
+            
+        
         <CardActions className={classes.cardAction}>
+            <Typography variant='body2' color='textSecondary' component={Link} to={`/${props.product.id}`}>
+              Chi tiết
+            </Typography>
             <IconButton onClick={() => {props.handleAddToCart(props.product.id, 1)}} disabled={props.product.is.pay_what_you_want}>
                 <AddShoppingCart/>
             </IconButton>

@@ -35,8 +35,8 @@ const IntroGypsum = (props) => {
             
             <Typography variant="h3" style={{fontFamily:"Fira Sans"}}>Giá sốc mùa dịch</Typography>
             {props.products.length ?  
-            <ProductSummary products={props.products} category="Thi công vách" showPrice={true} /> : <div style={{display: 'flex', justifyContent: 'center'}}><CircularProgress /></div>}
-            <ProductSummary products={props.products} category="Thi công trần" showPrice={true}/>
+            <ProductSummary products={props.products} category="Thi công trần" showPrice={true} /> : <div style={{display: 'flex', justifyContent: 'center'}}><CircularProgress /></div>}
+            <ProductSummary products={props.products} category="Thi công vách" showPrice={true}/>
         </Card>}
         <Button style={{color:"#479cc9"}} className={classes.icon} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo} /></Button>
         <main className={classes.main} style={open ? {filter:"brightness(30%)"} : {filter:"brightness(100%)"}}>
