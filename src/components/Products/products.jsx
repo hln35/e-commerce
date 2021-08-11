@@ -55,6 +55,11 @@ const Products = (props) => {
             <link rel="canonical" href="https://tanhaivanltd.com/" />
             <meta name="description" content="Công ty TNHH xây lắp và thương mại Tân Hải Vân với kinh nghiệm gần 20 năm trong ngành trần vách thạch cao sẽ đem đến sự hài lòng cho mọi công trình"/>
             <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, trang chủ, 2021"/>
+            <meta property="og:url" content="https://tanhaivanltd.com/"/>
+            <meta property="og:type" content="website"/>
+            <meta property="og:title" content="Báo giá tấm, khung xương và vật tư phụ 2021"/>
+            <meta property="og:image" content="https://vinhtuong.com/sites/default/files/2020-03/phong-bep-(5)%20(2).jpg"/>
+            <meta property="og:description" content="Báo giá nguyên vật tư các sản phẩm ngành thạch cao từ TTPP Top 5 Miền Bắc. Đảm bảo sẽ có giá tốt đến các anh em thợ thi công, cũng như chủ nhà."/> 
         </Helmet>
         <div className={classes.toolbar}></div>
         <Button className={classes.icon} style={{color:"#479cc9"}} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo}/></Button>

@@ -24,7 +24,7 @@ const App = () => {
   const [categories, setCategories] = useState({});
 
   const fetchProducts  = async () =>{
-    const {data} = await commerce_1.products.list();
+    const {data} = await commerce_1.products.list({limit: 100,});
     setProducts(data);
   };
 
