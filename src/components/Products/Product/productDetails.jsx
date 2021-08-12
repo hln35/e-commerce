@@ -3,11 +3,12 @@ import { useTheme, makeStyles } from '@material-ui/core/styles';
 import { Typography, Card, CardMedia,CardContent, Grid, IconButton, Button, Hidden, BottomNavigation, BottomNavigationAction, CssBaseline, Link, Select, MenuItem, FormControl, InputLabel} from '@material-ui/core'
 import Carousel from 'react-material-ui-carousel'
 import { AddShoppingCart, Phone } from '@material-ui/icons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Cart from '../Cart/Cart';
 import {ImageList, ImageListItem} from '@material-ui/core'
 import { Helmet } from 'react-helmet';
 import zalo from '../../../assests/zalo.png'
+import { commerce_1 } from '../../../lib/commerce';
 const useStyles = makeStyles((theme) => ({
     root: {
       display: 'flex',
@@ -123,13 +124,40 @@ const ProductDetail =(props) =>{
     const [imageUrl, setImageUrl] = useState(props.product.assets[0].url);
     const [value, setValue] = useState();
     const [variant, setVariant] = useState();
+    const [variants, setVariants] = useState();
     const handleChange = (e) => {
       setVariant(e.target.value)
     }
     const changeImg = (imgUrl) =>{
       setImageUrl(imgUrl)
     }
-   
+    const fetchVariants = ()=>{
+      setVariants(props.product.variant_groups[0].options)
+    }
+    const fetchVariant = () => {
+      setVariant(variants[0])
+    }
+    useEffect(()=>{
+      if(props.product.variant_groups.length){fetchVariants()}
+    },[])
+    useEffect(() => {
+      if(variants){fetchVariant()}
+    },[variants])
+    console.log(variant)
+    console.log(variants)
+
+    const PriceHasVariants = () => (
+      <Typography variant="h6" color="textPrimary">
+       {props.product.is.pay_what_you_want ? "Liên hệ để biết giá sản phẩm hiện tại" : variant && variant.price.formatted_with_code}
+       </Typography>
+      
+    )
+    const PriceNoVariants = () => (
+      <Typography variant="h6" color="textPrimary">
+      {props.product.is.pay_what_you_want ? "Liên hệ để biết giá sản phẩm hiện tại" : props.product.price.formatted_with_code}
+      </Typography>
+      
+    )
 
     return(
       <>
@@ -236,14 +264,15 @@ const ProductDetail =(props) =>{
                           onChange={handleChange}
                          >
                    {props.product.variant_groups.length && props.product.variant_groups[0].options.map((option) => (
-                      <MenuItem value={option.name} variant="h6">{option.name}</MenuItem>
+                      <MenuItem value={option} variant="h6">{option.name}</MenuItem>
     ))}
                  </Select>
                  </FormControl> : <Typography/>}
                  <br/>
-                 <Typography variant="h6" color="textPrimary">
-                   {props.product.is.pay_what_you_want ? "Liên hệ để biết giá sản phẩm hiện tại" : props.product.price.formatted_with_code}
-                 </Typography>
+                 
+                   {props.product.variant_groups.length ? <PriceHasVariants/> : <PriceNoVariants/>}
+                   {/* props.product.variant_groups.length ?{ props.product.is.pay_what_you_want ? "Liên hệ để biết giá sản phẩm hiện tại" : props.product.price.formatted_with_code} */}
+                 
                </CardContent>
              </Card>
              <Card>
@@ -272,17 +301,4 @@ const ProductDetail =(props) =>{
 
 export default ProductDetail
 
-      {/*  <Card className={classes.display}>
-            <Grid item xs={12} md={3} sm={4} justify='space-between' className={classes.horizontalDisplay}>
-                <CardMedia className={classes.media} image="https://cdn.chec.io/merchants/29897/assets/d3cmK6ejCqUm41GG|he-fineline-plus-2020-mb-on.webp" >
-
-                </CardMedia>
-                <div className={classes.details}>
-                <CardContent>
-                    <Typography>
-                    GGGGGGGGGGGGGGGGGGGGG
-                    </Typography>
-                </CardContent>
-                </div>
-            </Grid>
-            </Card> */}
+      
