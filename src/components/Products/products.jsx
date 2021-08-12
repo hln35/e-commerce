@@ -27,7 +27,7 @@ const Products = (props) => {
         const fetchCategories = async () =>{
             const {data} = await commerce_1.categories.list();
             setCategories(data);
-            setCategory("Thi công trần")
+            setCategory("Tấm trần chìm")
           };
        
         fetchCategories();

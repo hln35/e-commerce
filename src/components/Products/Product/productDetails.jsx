@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTheme, makeStyles } from '@material-ui/core/styles';
-import { Typography, Card, CardMedia,CardContent, Grid, IconButton, Button, Hidden, BottomNavigation, BottomNavigationAction, CssBaseline, Link} from '@material-ui/core'
+import { Typography, Card, CardMedia,CardContent, Grid, IconButton, Button, Hidden, BottomNavigation, BottomNavigationAction, CssBaseline, Link, Select, MenuItem, FormControl, InputLabel} from '@material-ui/core'
 import Carousel from 'react-material-ui-carousel'
 import { AddShoppingCart, Phone } from '@material-ui/icons';
 import { useState } from 'react';
@@ -122,7 +122,10 @@ const ProductDetail =(props) =>{
     
     const [imageUrl, setImageUrl] = useState(props.product.assets[0].url);
     const [value, setValue] = useState();
-    
+    const [variant, setVariant] = useState();
+    const handleChange = (e) => {
+      setVariant(e.target.value)
+    }
     const changeImg = (imgUrl) =>{
       setImageUrl(imgUrl)
     }
@@ -222,20 +225,33 @@ const ProductDetail =(props) =>{
              </Carousel>
              <Card>
                <CardContent>
-                 <Typography variant='h6'>
+                 <Typography variant='h4'>
                  {props.product.name}
                  </Typography>
-                 <Typography variant="subtitle1" color="textSecondary">
+                {props.product.variant_groups.length ? <FormControl fullWidth style={{backgroundColor:"#FDDC00"}}>
+                    <InputLabel id="simple-select-label" style={{fontSize:22}} alignItems="center">Chọn Sản Phẩm</InputLabel> 
+                 <Select id="simple-select-label"
+                          fullWidth
+                          value={variant}
+                          onChange={handleChange}
+                         >
+                   {props.product.variant_groups.length && props.product.variant_groups[0].options.map((option) => (
+                      <MenuItem value={option.name} variant="h6">{option.name}</MenuItem>
+    ))}
+                 </Select>
+                 </FormControl> : <Typography/>}
+                 <br/>
+                 <Typography variant="h6" color="textPrimary">
                    {props.product.is.pay_what_you_want ? "Liên hệ để biết giá sản phẩm hiện tại" : props.product.price.formatted_with_code}
                  </Typography>
                </CardContent>
              </Card>
              <Card>
                <CardContent>
-                <Typography variant='h6' gutterBottom style={{fontFamily:"Time New Roman"}}>
+                <Typography variant='h5' gutterBottom style={{fontFamily:"Time New Roman"}}>
                  Mô tả sản phẩm
                  </Typography>
-                 <Typography variant='h7' dangerouslySetInnerHTML={{ __html:props.product.description}} style={{fontFamily:"Time New Roman"}}>
+                 <Typography variant='h6' dangerouslySetInnerHTML={{ __html:props.product.description}} style={{fontFamily:"Time New Roman"}}>
                  
                  </Typography>
                  </CardContent>
