@@ -60,6 +60,11 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
                 Đối với khách hàng là các đại lý, chúng tôi có hệ thống kho bãi lớn luôn đảm bảo có một nguồn hàng dồi dào. Chúng tôi cũng luôn áp dụng tối đa các chương trình của Vĩnh Tường đến khách hàng nhằm đảm bảo có hàng với giá chiết khấu tới các đại lý.Tân Hải Vân cũng đã đầu tư một đội xe tải ổn định giúp đơn hàng sẽ được vận chuyển không chút chậm trễ. 
                 </Typography>
                 <br/>
+                <Typography  component={Link} href="/vachthachcao">
+                Nếu bạn muốn tìm hiểu về vách thạch cao, đây sẽ là bài viết dành cho bạn(tại đây)
+                </Typography>
+                <br/>
+                <br/>
                 <Typography variant="h6" style={{color:'#b5934c'}}>
                     Định nghĩa về trần thạch cao
                 </Typography>
