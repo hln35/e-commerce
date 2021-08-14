@@ -6,9 +6,10 @@ import SimpleMenu from './NavItem/NavItem';
 import Drawer from './NavItem/NavItemsDrawer';
 const navItems=[
     {id: '1', name:"Trang chủ", href:"/" },
-    {id: '2', name:"Thi công", href:"/thachcao"},
-    {id: '3', name:"Giới Thiệu", href:"/intro"},
-    {id: '4', name:"Liên Hệ", href:"/contact"},
+    {id: '2', name:"Thi công trần", href:"/thachcao"},
+    {id: '3', name:"Thi công vách", href:"/vachthachcao"},
+    {id: '4', name:"Giới Thiệu", href:"/intro"},
+    {id: '5', name:"Liên Hệ", href:"/contact"},
     
 ]
 const drawerWidth=0

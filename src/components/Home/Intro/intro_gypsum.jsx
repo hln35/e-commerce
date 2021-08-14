@@ -22,7 +22,7 @@ const IntroGypsum = (props) => {
             <title>Thi công trần vách thạch cao| Công ty Tân Hải Vân</title>
             <link rel="canonical" href="https://tanhaivanltd.com/thachcao" />
             <meta name="description" content="Công ty TNHH xây lắp và thương mại Tân Hải Vân chuyên cung cấp thạch cao đến các công trình trên cả nước, đồng thời cung cấp các giải pháp toàn diện về trần vách thạch cao đến các hộ gia đình Việt Nam "/>
-            <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, thi công, giá rẻ, 2021"/>
+            <meta name="keywords" content="thạch cao, vĩnh tường, trần thạch cao, vách thạch cao, tân hải vân, thi công, giá rẻ,chất lượng, mẫu mã đẹp, 2021"/>
         </Helmet>
         {open && <Card className={classes.ad}>
              <CardActions className={classes.closeButton}>
@@ -35,8 +35,8 @@ const IntroGypsum = (props) => {
             
             <Typography variant="h3" style={{fontFamily:"Fira Sans"}}>Giá sốc mùa dịch</Typography>
             {props.products.length ?  
-            <ProductSummary products={props.products} category="Thi công trần" showPrice={true} /> : <div style={{display: 'flex', justifyContent: 'center'}}><CircularProgress /></div>}
-            <ProductSummary products={props.products} category="Thi công vách" showPrice={true}/>
+            <ProductSummary products={props.products} category="Thi công trần" showPrice={true} onHandleAddToCart={props.onHandleAddToCart} onChooseProduct={props.onChooseProduct}/> : <div style={{display: 'flex', justifyContent: 'center'}}><CircularProgress /></div>}
+            <ProductSummary products={props.products} category="Thi công vách" showPrice={true} onHandleAddToCart={props.onHandleAddToCart} onChooseProduct={props.onChooseProduct}/>
         </Card>}
         <Button style={{color:"#479cc9"}} className={classes.icon} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo} /></Button>
         <main className={classes.main} style={open ? {filter:"brightness(30%)"} : {filter:"brightness(100%)"}}>
@@ -157,7 +157,7 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
                 </Typography>
             </CardContent>
         </Card>
-        <ProductCategory products={props.products} category="Tấm trần chìm" showPrice={false}/>
+        <ProductCategory products={props.products} category="Tấm trần chìm" showPrice={false} onHandleAddToCart={props.onHandleAddToCart} onChooseProduct={props.onChooseProduct}/>
         <Card>
             <CardContent>
                 <Typography>
@@ -199,7 +199,7 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
                  </Typography>
             </CardContent>
         </Card>
-        <ProductCategory products={props.products} category="Thi công trần" showPrice={true}/>      
+        <ProductCategory products={props.products} category="Thi công trần" showPrice={true} onHandleAddToCart={props.onHandleAddToCart} onChooseProduct={props.onChooseProduct}/>      
         <Card>
             <CardContent>
                 <Typography style={{fontWeight:"bolder"}}>
@@ -215,7 +215,7 @@ Tuy nhiên vẫn có rất nhiều người chưa thực sự hiểu về trần
             
             </CardContent>
         </Card>
-        <ProductCategory products={props.products} category="Thi công vách" showPrice={true}/> 
+        <ProductCategory products={props.products} category="Thi công vách" showPrice={true} onHandleAddToCart={props.onHandleAddToCart} onChooseProduct={props.onChooseProduct}/> 
         <Card>
             <CardContent>
                 <Typography>

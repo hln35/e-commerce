@@ -11,6 +11,7 @@ import IntroGypsum from './components/Home/Intro/intro_gypsum'
 import { commerce_1 } from './lib/commerce'
 import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import Vach from './components/Products/GypsumWall'
 
 
 
@@ -125,12 +126,15 @@ const App = () => {
              />
           </Route>
           <Route path="/thachcao" >
-            <IntroGypsum products={products}
+            <IntroGypsum products={products} onHandleAddToCart={handleAddToCart} onChooseProduct={getProductId}
              />
           </Route>
           <Route path="/thachcaodep" >
             <IntroGypsum products={products}
              />
+          </Route>
+          <Route path="/vachthachcao" >
+            <Vach products={products} onHandleAddToCart={handleAddToCart} onChooseProduct={getProductId}/>
           </Route>
 
           <Route path="/">
