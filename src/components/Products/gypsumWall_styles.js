@@ -4,7 +4,8 @@ const useStyles = makeStyles ((theme)=>(
         display:"flex",
         marginLeft:"10%",
         marginRight:"auto",
-        marginTop:"5%"
+        marginTop:"5%",
+        
     },
     card:{
         backgroundColor:"transparent",
@@ -60,7 +61,12 @@ const useStyles = makeStyles ((theme)=>(
         top:'50%',
         left:'50%',
         transform:'translate(-50%,-50%)'
-    }
+    },
+    video:{
+        width:"90%",
+        height:"auto",    
+        transform:"translate(0%,0%)"
+    },     
 }
 ))
 export default useStyles
