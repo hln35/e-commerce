@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography, Card, CardContent, CardMedia, Link, CardActions, IconButton } from '@material-ui/core'
+import { Box, Typography, Card, CardContent, CardMedia, Link, CardActions, IconButton,Button } from '@material-ui/core'
 import background from '../../assests/backgroundFifa.jpg'
 import VachThachCao from '../../assests/anh_vach_thach_cao.jpg'
 import Vach1Mat from '../../assests/vach_1_mat.jpg'
@@ -15,6 +15,8 @@ import VachChiuAm from '../../assests/vach_chiu_am.jpg'
 import VachChiuLuc from '../../assests/vach_chiu_luc.png'
 import DryVsBrick from '../../assests/DrywallvsBrickwall.mp4'
 import zIndex from '@material-ui/core/styles/zIndex'
+import zalo from '../../assests/zalo.png'
+
 const Vach = (props) => {
     const classes = useStyles()
     const [open, setOpen] = useState(true)
@@ -58,6 +60,8 @@ const Vach = (props) => {
             <ProductSummary products={props.products} category="Thi công vách" showPrice={true} onHandleAddToCart={props.onHandleAddToCart} onChooseProduct={props.onChooseProduct}/>
         </Card>}
             <Card className={classes.card} >
+            <Button className={classes.icon} style={{color:"#479cc9"}} component={Link} target="_blank" href="https://zalo.me/0904252226"><img src={zalo}/></Button>
+
                 <CardContent>
             <Typography  className={classes.text} variant="h3" style={{fontWeight:"bold"}}>
                 Vách thạch cao - Trách được sao ?

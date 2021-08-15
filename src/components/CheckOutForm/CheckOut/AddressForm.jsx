@@ -46,7 +46,7 @@ const AddressForm=({next, token}) => {
     return(
         <>
         <Typography variant='h6' gutterBottom>
-           Address
+           Địa chỉ
         </Typography>
         <FormProvider {...methods}>
             <form onSubmit={methods.handleSubmit((data)=> next({...data, option, subDivision}))} >
@@ -82,10 +82,10 @@ const AddressForm=({next, token}) => {
                 <br/>
                     <div style={{display:'flex', justifyContent:'space-between'}}>
                         <Button component={Link} href='/cart' variant='outlined'>
-                            Back to cart
+                            Trở lại giỏ hàng
                         </Button>
                         <Button type='submit' variant='contained' color='primary'>
-                            Next
+                            Tiếp tục
                         </Button>
                     </div>
             </form>

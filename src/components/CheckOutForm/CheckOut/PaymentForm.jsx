@@ -43,7 +43,7 @@ const PaymentForm = ({shippingData, token, onCaptureCheckout, nextStep, backStep
         
         <Review token={token}/>
         <Divider/>
-        <Typography variant='h6' gutterBottom style={{margin:"20px 0"}}>Payment method</Typography>
+        <Typography variant='h6' gutterBottom style={{margin:"20px 0"}}>Thanh toán bằng thẻ tín dụng</Typography>
         <br/>
         <Elements stripe={stripePromise}>
             <ElementsConsumer>
@@ -52,8 +52,8 @@ const PaymentForm = ({shippingData, token, onCaptureCheckout, nextStep, backStep
                         <CardElement hidePostalCode={true}/>
                         <br/>
                         <div style={{display:'space-between'}}>
-                            <Button variant='outlined' onClick={backStep} >Back</Button>
-                            <Button variant='contained' color='primary' disabled={!stripe} type='submit' >Pay </Button>
+                            <Button variant='outlined' onClick={backStep} >Trở lại</Button>
+                            <Button variant='contained' color='primary' disabled={!stripe} type='submit' >Thanh toán </Button>
                         </div>
                     </form>
                 )}

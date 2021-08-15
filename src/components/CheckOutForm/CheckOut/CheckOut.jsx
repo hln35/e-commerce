@@ -13,7 +13,7 @@ const CheckOut =({cart, order, error, onCaptureCheckout}) => {
     const[token,setToken] = useState(null)
     const [shippingData, setShippingData] = useState({})
     
-    const steps = ["Shipping address", "Payment details"];
+    const steps = ["Địa chỉ giao hàng", "Thông tin thanh toán"];
     const classes = useStyles();
     useEffect(() =>{
         const generateToken = async () => {
@@ -64,7 +64,7 @@ const CheckOut =({cart, order, error, onCaptureCheckout}) => {
                 <CssBaseline/>
                 <Paper className={classes.paper}>
                     <Typography variant='h4' align='center'>
-                        Check Out Form
+                        Đơn hàng của bạn
                     </Typography>
                     <Stepper activeStep={activeStep} alternativeLabel>
                         {

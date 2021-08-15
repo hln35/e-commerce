@@ -35,7 +35,9 @@ const Cart= (props) => {
                     Xóa giỏ hàng
                 </Button>
                 <Button component={Link} href='/checkout' color='primary' variant='contained'  className={classes.checkoutButton}>
-                    Thanh toán
+                    <Typography>
+                        Thanh toán
+                    </Typography>
                 </Button>
                 </div>
         </CardContent>

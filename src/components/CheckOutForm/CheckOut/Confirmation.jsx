@@ -3,7 +3,7 @@ import { Typography } from '@material-ui/core'
 const Confirmation = () => {
     return(
         <Typography>
-            Confirmation
+            Xác nhận đã đặt hàng
         </Typography>
     )
 }
